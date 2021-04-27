@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Dominio;
 
-
-
-
 namespace Negocio {
     class AccesoDatos {
         
@@ -39,6 +36,12 @@ namespace Negocio {
             if (lector != null)
                 lector.Close();
             conexion.Close();
+        }
+
+
+        public SqlDataReader Lector {
+            get { return lector; }
+
         }
 
 

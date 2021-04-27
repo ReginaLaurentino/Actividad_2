@@ -91,15 +91,16 @@ namespace Actividad_2
             this.Show_data.Location = new System.Drawing.Point(23, 63);
             this.Show_data.Name = "Show_data";
             this.Show_data.RowTemplate.Height = 25;
-            this.Show_data.Size = new System.Drawing.Size(273, 239);
+            this.Show_data.Size = new System.Drawing.Size(211, 565);
             this.Show_data.TabIndex = 4;
+            this.Show_data.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Show_data_MouseClick);
             // 
             // ImagenProducto
             // 
             this.ImagenProducto.BackColor = System.Drawing.Color.Transparent;
-            this.ImagenProducto.Location = new System.Drawing.Point(323, 63);
+            this.ImagenProducto.Location = new System.Drawing.Point(254, 47);
             this.ImagenProducto.Name = "ImagenProducto";
-            this.ImagenProducto.Size = new System.Drawing.Size(232, 239);
+            this.ImagenProducto.Size = new System.Drawing.Size(754, 581);
             this.ImagenProducto.TabIndex = 5;
             this.ImagenProducto.TabStop = false;
             // 
@@ -110,7 +111,7 @@ namespace Actividad_2
             this.B_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.B_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Agregar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B_Agregar.Location = new System.Drawing.Point(44, 335);
+            this.B_Agregar.Location = new System.Drawing.Point(34, 643);
             this.B_Agregar.Name = "B_Agregar";
             this.B_Agregar.Size = new System.Drawing.Size(75, 23);
             this.B_Agregar.TabIndex = 6;
@@ -122,7 +123,7 @@ namespace Actividad_2
             this.B_Modificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_Modificar.BackgroundImage")));
             this.B_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Modificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B_Modificar.Location = new System.Drawing.Point(140, 335);
+            this.B_Modificar.Location = new System.Drawing.Point(128, 643);
             this.B_Modificar.Name = "B_Modificar";
             this.B_Modificar.Size = new System.Drawing.Size(75, 23);
             this.B_Modificar.TabIndex = 7;
@@ -135,7 +136,7 @@ namespace Actividad_2
             this.B_Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.B_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Eliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B_Eliminar.Location = new System.Drawing.Point(232, 335);
+            this.B_Eliminar.Location = new System.Drawing.Point(221, 643);
             this.B_Eliminar.Name = "B_Eliminar";
             this.B_Eliminar.Size = new System.Drawing.Size(75, 23);
             this.B_Eliminar.TabIndex = 8;
@@ -147,7 +148,7 @@ namespace Actividad_2
             this.B_Detalle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_Detalle.BackgroundImage")));
             this.B_Detalle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Detalle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B_Detalle.Location = new System.Drawing.Point(323, 335);
+            this.B_Detalle.Location = new System.Drawing.Point(323, 643);
             this.B_Detalle.Name = "B_Detalle";
             this.B_Detalle.Size = new System.Drawing.Size(75, 23);
             this.B_Detalle.TabIndex = 9;
@@ -158,7 +159,7 @@ namespace Actividad_2
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(528, 291);
+            this.pictureBox1.Location = new System.Drawing.Point(938, 613);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 84);
             this.pictureBox1.TabIndex = 10;
@@ -169,7 +170,7 @@ namespace Actividad_2
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(614, 368);
+            this.ClientSize = new System.Drawing.Size(1032, 694);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.B_Detalle);
             this.Controls.Add(this.B_Eliminar);
@@ -183,6 +184,7 @@ namespace Actividad_2
             this.Controls.Add(this.Label_Buscador);
             this.Name = "FormPresentacion";
             this.Text = "StockAdministrator";
+            this.Load += new System.EventHandler(this.FormPresentacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Show_data)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
