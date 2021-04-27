@@ -1,17 +1,78 @@
 {
   "format": 1,
   "restore": {
-    "E:\\UTN\\PROG 3\\Actividad 2\\Actividad_2.csproj": {}
+    "E:\\UTN\\PROG 3\\Actividad 2\\Presentacion.csproj": {}
   },
   "projects": {
-    "E:\\UTN\\PROG 3\\Actividad 2\\Actividad_2.csproj": {
+    "E:\\UTN\\PROG 3\\Actividad 2\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UTN\\PROG 3\\Actividad 2\\Actividad_2.csproj",
-        "projectName": "Actividad_2",
-        "projectPath": "E:\\UTN\\PROG 3\\Actividad 2\\Actividad_2.csproj",
+        "projectUniqueName": "E:\\UTN\\PROG 3\\Actividad 2\\Dominio\\Dominio.csproj",
+        "projectName": "Dominio",
+        "projectPath": "E:\\UTN\\PROG 3\\Actividad 2\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\FreakLuthien\\.nuget\\packages\\",
-        "outputPath": "E:\\UTN\\PROG 3\\Actividad 2\\obj\\",
+        "outputPath": "E:\\UTN\\PROG 3\\Actividad 2\\Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\FreakLuthien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\UTN\\PROG 3\\Actividad 2\\Negocio\\Negocio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\UTN\\PROG 3\\Actividad 2\\Negocio\\Negocio.csproj",
+        "projectName": "Negocio",
+        "projectPath": "E:\\UTN\\PROG 3\\Actividad 2\\Negocio\\Negocio.csproj",
+        "packagesPath": "C:\\Users\\FreakLuthien\\.nuget\\packages\\",
+        "outputPath": "E:\\UTN\\PROG 3\\Actividad 2\\Negocio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +130,14 @@
         }
       }
     },
-    "E:\\UTN\\PROG 3\\Actividad 2\\Dominio\\Dominio.csproj": {
+    "E:\\UTN\\PROG 3\\Actividad 2\\Presentacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UTN\\PROG 3\\Actividad 2\\Dominio\\Dominio.csproj",
-        "projectName": "Dominio",
-        "projectPath": "E:\\UTN\\PROG 3\\Actividad 2\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "E:\\UTN\\PROG 3\\Actividad 2\\Presentacion.csproj",
+        "projectName": "Presentacion",
+        "projectPath": "E:\\UTN\\PROG 3\\Actividad 2\\Presentacion.csproj",
         "packagesPath": "C:\\Users\\FreakLuthien\\.nuget\\packages\\",
-        "outputPath": "E:\\UTN\\PROG 3\\Actividad 2\\Dominio\\obj\\",
+        "outputPath": "E:\\UTN\\PROG 3\\Actividad 2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -96,7 +157,14 @@
         "frameworks": {
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\UTN\\PROG 3\\Actividad 2\\Dominio\\Dominio.csproj": {
+                "projectPath": "E:\\UTN\\PROG 3\\Actividad 2\\Dominio\\Dominio.csproj"
+              },
+              "E:\\UTN\\PROG 3\\Actividad 2\\Negocio\\Negocio.csproj": {
+                "projectPath": "E:\\UTN\\PROG 3\\Actividad 2\\Negocio\\Negocio.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
