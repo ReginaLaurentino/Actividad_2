@@ -69,7 +69,7 @@ namespace Negocio {
             List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
 
-
+            //ver como pasarle los indices de Categoria y Marcas
 
             try {
                 string valores = " "+columna+" = '"+texto+"' ";
