@@ -99,4 +99,8 @@ insert into ARTICULOS values ('S01', 'Galaxy S10', 'Una canoa cara', 1, 1, 'http
 ('A23', 'Apple TV', 'lindo loro', 2, 3, 'https://cnnespanol2.files.wordpress.com/2015/12/gadgets-mc3a1s-populares-apple-tv-2015-18.jpg?quality=100&strip=info&w=460&h=260&crop=1', 7850)
 
 select * from ARTICULOS
-select Codigo , Nombre from ARTICULOS
+select * from MARCAS
+select Codigo , Nombre, Descripcion, IdMarca, IdCategoria, Precio from ARTICULOS
+
+select Codigo , Nombre, ImagenUrl from ARTICULOS
+where Codigo = 'S01'

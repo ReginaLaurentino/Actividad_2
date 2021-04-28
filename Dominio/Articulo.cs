@@ -21,6 +21,20 @@ namespace Dominio {
 
         public decimal Precio { get; set; }
 
+        public Articulo( string codigo, string nombre, string descripcion, string marca, string categoria, decimal precio)
+        {
+            Codigo = codigo;
+            Nombre = nombre;
+            Descripcion = descripcion;
+            Marcas.Nombre = marca;
+            Categorias.Nombre = categoria;
+            Precio = precio;
+        }
+
+        public Articulo()
+        {
+
+        }
 
 
     }

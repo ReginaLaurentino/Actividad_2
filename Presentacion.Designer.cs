@@ -61,6 +61,13 @@ namespace Actividad_2
             // Desplegable
             // 
             this.Desplegable.FormattingEnabled = true;
+            this.Desplegable.Items.AddRange(new object[] {
+            "Codigo",
+            "Nombre",
+            "Descripcion",
+            "Marca",
+            "Categoria",
+            "Precio"});
             this.Desplegable.Location = new System.Drawing.Point(71, 18);
             this.Desplegable.Name = "Desplegable";
             this.Desplegable.Size = new System.Drawing.Size(121, 23);
@@ -72,6 +79,7 @@ namespace Actividad_2
             this.Text_Buscador.Name = "Text_Buscador";
             this.Text_Buscador.Size = new System.Drawing.Size(234, 23);
             this.Text_Buscador.TabIndex = 2;
+            this.Text_Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Text_Buscador_KeyPress);
             // 
             // B_Aceptar_Buscador
             // 
@@ -84,6 +92,7 @@ namespace Actividad_2
             this.B_Aceptar_Buscador.TabIndex = 3;
             this.B_Aceptar_Buscador.Text = "Aceptar";
             this.B_Aceptar_Buscador.UseVisualStyleBackColor = true;
+            this.B_Aceptar_Buscador.Click += new System.EventHandler(this.B_Aceptar_Buscador_Click);
             // 
             // Show_data
             // 
@@ -91,16 +100,16 @@ namespace Actividad_2
             this.Show_data.Location = new System.Drawing.Point(23, 63);
             this.Show_data.Name = "Show_data";
             this.Show_data.RowTemplate.Height = 25;
-            this.Show_data.Size = new System.Drawing.Size(211, 565);
+            this.Show_data.Size = new System.Drawing.Size(294, 565);
             this.Show_data.TabIndex = 4;
             this.Show_data.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Show_data_MouseClick);
             // 
             // ImagenProducto
             // 
             this.ImagenProducto.BackColor = System.Drawing.Color.Transparent;
-            this.ImagenProducto.Location = new System.Drawing.Point(254, 47);
+            this.ImagenProducto.Location = new System.Drawing.Point(323, 47);
             this.ImagenProducto.Name = "ImagenProducto";
-            this.ImagenProducto.Size = new System.Drawing.Size(754, 581);
+            this.ImagenProducto.Size = new System.Drawing.Size(685, 581);
             this.ImagenProducto.TabIndex = 5;
             this.ImagenProducto.TabStop = false;
             // 

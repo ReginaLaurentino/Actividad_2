@@ -1,18 +1,3 @@
-E:\UTN\PROG 3\Actividad 2\Negocio\bin\Debug\net5.0-windows\Dominio.dll
-E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.csprojAssemblyReference.cache
-E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.GeneratedMSBuildEditorConfig.editorconfig
-E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.AssemblyInfoInputs.cache
-E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.AssemblyInfo.cs
-E:\UTN\PROG 3\Actividad 2\Negocio\bin\Debug\net5.0-windows\Negocio.deps.json
-E:\UTN\PROG 3\Actividad 2\Negocio\bin\Debug\net5.0-windows\Negocio.dll
-E:\UTN\PROG 3\Actividad 2\Negocio\bin\Debug\net5.0-windows\ref\Negocio.dll
-E:\UTN\PROG 3\Actividad 2\Negocio\bin\Debug\net5.0-windows\Negocio.pdb
-E:\UTN\PROG 3\Actividad 2\Negocio\bin\Debug\net5.0-windows\Dominio.pdb
-E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.csproj.CoreCompileInputs.cache
-E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.csproj.CopyComplete
-E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.dll
-E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\ref\Negocio.dll
-E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.pdb
 C:\Users\Laura\Desktop\Act2 Prog3\Negocio\bin\Debug\net5.0-windows\Negocio.deps.json
 C:\Users\Laura\Desktop\Act2 Prog3\Negocio\bin\Debug\net5.0-windows\Negocio.dll
 C:\Users\Laura\Desktop\Act2 Prog3\Negocio\bin\Debug\net5.0-windows\ref\Negocio.dll
@@ -28,3 +13,18 @@ C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\Negocio.cspro
 C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\Negocio.dll
 C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\ref\Negocio.dll
 C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\Negocio.pdb
+E:\UTN\PROG 3\Actividad 2\Negocio\bin\Debug\net5.0-windows\Negocio.deps.json
+E:\UTN\PROG 3\Actividad 2\Negocio\bin\Debug\net5.0-windows\Negocio.dll
+E:\UTN\PROG 3\Actividad 2\Negocio\bin\Debug\net5.0-windows\ref\Negocio.dll
+E:\UTN\PROG 3\Actividad 2\Negocio\bin\Debug\net5.0-windows\Negocio.pdb
+E:\UTN\PROG 3\Actividad 2\Negocio\bin\Debug\net5.0-windows\Dominio.dll
+E:\UTN\PROG 3\Actividad 2\Negocio\bin\Debug\net5.0-windows\Dominio.pdb
+E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.csprojAssemblyReference.cache
+E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.GeneratedMSBuildEditorConfig.editorconfig
+E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.AssemblyInfoInputs.cache
+E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.AssemblyInfo.cs
+E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.csproj.CoreCompileInputs.cache
+E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.csproj.CopyComplete
+E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.dll
+E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\ref\Negocio.dll
+E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.pdb
