@@ -117,6 +117,7 @@ namespace Actividad_2
             this.B_Agregar.TabIndex = 6;
             this.B_Agregar.Text = "Agregar";
             this.B_Agregar.UseVisualStyleBackColor = true;
+            this.B_Agregar.Click += new System.EventHandler(this.B_Agregar_Click);
             // 
             // B_Modificar
             // 

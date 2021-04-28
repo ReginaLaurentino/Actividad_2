@@ -35,13 +35,33 @@ namespace Negocio {
                 datos.cerrarConexion();
             }
 
-
+            
 
 
 
         }
 
+        public void agregar(Articulo nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
 
+            try
+            {
+                string valores = "values('" + nuevo.Codigo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', " + nuevo.Marcas.ID + ", " + nuevo.Categorias.ID + ", '" + nuevo.UrlImagen + "', " + nuevo.Precio + ")";
+                datos.SetearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) " + valores);
+
+                datos.EjectutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
 
 

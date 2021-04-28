@@ -13,3 +13,18 @@ E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.csproj.CopyCo
 E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.dll
 E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\ref\Negocio.dll
 E:\UTN\PROG 3\Actividad 2\Negocio\obj\Debug\net5.0-windows\Negocio.pdb
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\bin\Debug\net5.0-windows\Negocio.deps.json
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\bin\Debug\net5.0-windows\Negocio.dll
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\bin\Debug\net5.0-windows\ref\Negocio.dll
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\bin\Debug\net5.0-windows\Negocio.pdb
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\bin\Debug\net5.0-windows\Dominio.dll
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\bin\Debug\net5.0-windows\Dominio.pdb
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\Negocio.csprojAssemblyReference.cache
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\Negocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\Negocio.AssemblyInfoInputs.cache
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\Negocio.AssemblyInfo.cs
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\Negocio.csproj.CopyComplete
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\Negocio.dll
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\ref\Negocio.dll
+C:\Users\Laura\Desktop\Act2 Prog3\Negocio\obj\Debug\net5.0-windows\Negocio.pdb

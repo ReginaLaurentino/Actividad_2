@@ -30,7 +30,6 @@ namespace Actividad_2
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregar));
-            this.Label_ID = new System.Windows.Forms.Label();
             this.Label_Codigo = new System.Windows.Forms.Label();
             this.Label_Nombre = new System.Windows.Forms.Label();
             this.Label_Descrip = new System.Windows.Forms.Label();
@@ -38,8 +37,7 @@ namespace Actividad_2
             this.Label_imagen = new System.Windows.Forms.Label();
             this.Label_Marca = new System.Windows.Forms.Label();
             this.Label_Categoria = new System.Windows.Forms.Label();
-            this.Tex_ID = new System.Windows.Forms.TextBox();
-            this.Text_CodigoBarras = new System.Windows.Forms.TextBox();
+            this.Text_Codigo = new System.Windows.Forms.TextBox();
             this.Text_Nombre = new System.Windows.Forms.TextBox();
             this.Text_Descripcion = new System.Windows.Forms.TextBox();
             this.Text_Precio = new System.Windows.Forms.TextBox();
@@ -49,19 +47,9 @@ namespace Actividad_2
             this.B_Aceptar = new System.Windows.Forms.Button();
             this.B_Cancelar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Label_ID
-            // 
-            this.Label_ID.AutoSize = true;
-            this.Label_ID.BackColor = System.Drawing.Color.Transparent;
-            this.Label_ID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Label_ID.Location = new System.Drawing.Point(5, 22);
-            this.Label_ID.Name = "Label_ID";
-            this.Label_ID.Size = new System.Drawing.Size(20, 15);
-            this.Label_ID.TabIndex = 0;
-            this.Label_ID.Text = "ID";
             // 
             // Label_Codigo
             // 
@@ -70,9 +58,9 @@ namespace Actividad_2
             this.Label_Codigo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Label_Codigo.Location = new System.Drawing.Point(5, 58);
             this.Label_Codigo.Name = "Label_Codigo";
-            this.Label_Codigo.Size = new System.Drawing.Size(83, 15);
+            this.Label_Codigo.Size = new System.Drawing.Size(45, 15);
             this.Label_Codigo.TabIndex = 1;
-            this.Label_Codigo.Text = "Codigo Barras";
+            this.Label_Codigo.Text = "Codigo";
             // 
             // Label_Nombre
             // 
@@ -140,20 +128,12 @@ namespace Actividad_2
             this.Label_Categoria.TabIndex = 7;
             this.Label_Categoria.Text = "Categoria";
             // 
-            // Tex_ID
+            // Text_Codigo
             // 
-            this.Tex_ID.Location = new System.Drawing.Point(94, 19);
-            this.Tex_ID.Name = "Tex_ID";
-            this.Tex_ID.Size = new System.Drawing.Size(253, 23);
-            this.Tex_ID.TabIndex = 8;
-            // 
-            // Text_CodigoBarras
-            // 
-            this.Text_CodigoBarras.Location = new System.Drawing.Point(94, 55);
-            this.Text_CodigoBarras.Name = "Text_CodigoBarras";
-            this.Text_CodigoBarras.Size = new System.Drawing.Size(253, 23);
-            this.Text_CodigoBarras.TabIndex = 9;
-            this.Text_CodigoBarras.TextChanged += new System.EventHandler(this.Text_CodigoBarras_TextChanged);
+            this.Text_Codigo.Location = new System.Drawing.Point(94, 55);
+            this.Text_Codigo.Name = "Text_Codigo";
+            this.Text_Codigo.Size = new System.Drawing.Size(253, 23);
+            this.Text_Codigo.TabIndex = 9;
             // 
             // Text_Nombre
             // 
@@ -175,7 +155,7 @@ namespace Actividad_2
             this.Text_Precio.Name = "Text_Precio";
             this.Text_Precio.Size = new System.Drawing.Size(253, 23);
             this.Text_Precio.TabIndex = 12;
-            this.Text_Precio.TextChanged += new System.EventHandler(this.Text_Precio_TextChanged);
+            this.Text_Precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Text_Precio_KeyPress);
             // 
             // Text_Imagen
             // 
@@ -210,6 +190,7 @@ namespace Actividad_2
             this.B_Aceptar.TabIndex = 16;
             this.B_Aceptar.Text = "Aceptar";
             this.B_Aceptar.UseVisualStyleBackColor = true;
+            this.B_Aceptar.Click += new System.EventHandler(this.B_Aceptar_Click);
             // 
             // B_Cancelar
             // 
@@ -221,6 +202,7 @@ namespace Actividad_2
             this.B_Cancelar.TabIndex = 17;
             this.B_Cancelar.Text = "Cancelar";
             this.B_Cancelar.UseVisualStyleBackColor = true;
+            this.B_Cancelar.Click += new System.EventHandler(this.B_Cancelar_Click);
             // 
             // pictureBox1
             // 
@@ -232,12 +214,24 @@ namespace Actividad_2
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(8, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(296, 21);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Ingrese los datos del nuevo articulo:";
+            // 
             // FormAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(373, 414);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.B_Cancelar);
             this.Controls.Add(this.B_Aceptar);
@@ -247,8 +241,7 @@ namespace Actividad_2
             this.Controls.Add(this.Text_Precio);
             this.Controls.Add(this.Text_Descripcion);
             this.Controls.Add(this.Text_Nombre);
-            this.Controls.Add(this.Text_CodigoBarras);
-            this.Controls.Add(this.Tex_ID);
+            this.Controls.Add(this.Text_Codigo);
             this.Controls.Add(this.Label_Categoria);
             this.Controls.Add(this.Label_Marca);
             this.Controls.Add(this.Label_imagen);
@@ -256,9 +249,10 @@ namespace Actividad_2
             this.Controls.Add(this.Label_Descrip);
             this.Controls.Add(this.Label_Nombre);
             this.Controls.Add(this.Label_Codigo);
-            this.Controls.Add(this.Label_ID);
             this.Name = "FormAgregar";
             this.Text = "Agregar Producto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAgregar_FormClosing);
+            this.Load += new System.EventHandler(this.FormAgregar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,8 +260,6 @@ namespace Actividad_2
         }
 
         #endregion
-
-        private System.Windows.Forms.Label Label_ID;
         private System.Windows.Forms.Label Label_Codigo;
         private System.Windows.Forms.Label Label_Nombre;
         private System.Windows.Forms.Label Label_Descrip;
@@ -275,8 +267,7 @@ namespace Actividad_2
         private System.Windows.Forms.Label Label_imagen;
         private System.Windows.Forms.Label Label_Marca;
         private System.Windows.Forms.Label Label_Categoria;
-        private System.Windows.Forms.TextBox Tex_ID;
-        private System.Windows.Forms.TextBox Text_CodigoBarras;
+        private System.Windows.Forms.TextBox Text_Codigo;
         private System.Windows.Forms.TextBox Text_Nombre;
         private System.Windows.Forms.TextBox Text_Descripcion;
         private System.Windows.Forms.TextBox Text_Precio;
@@ -286,5 +277,6 @@ namespace Actividad_2
         private System.Windows.Forms.Button B_Aceptar;
         private System.Windows.Forms.Button B_Cancelar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

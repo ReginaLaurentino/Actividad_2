@@ -44,6 +44,11 @@ namespace Negocio {
 
         }
 
-
+        internal void EjectutarAccion()
+        {
+            comando.Connection = conexion;
+            conexion.Open();
+            comando.ExecuteNonQuery();
+        }
     }
 }

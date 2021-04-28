@@ -28,6 +28,12 @@ namespace Actividad_2
             CargarGrilla();
         }
 
+        private void B_Agregar_Click(object sender, EventArgs e)
+        {
+            FormAgregar agregar = new FormAgregar();
+            agregar.ShowDialog();
+            CargarGrilla();
+        }
         private void CargarGrilla()
         {
 
@@ -44,8 +50,7 @@ namespace Actividad_2
                 Show_data.Columns[4].Visible = false;
                 Show_data.Columns[5].Visible = false;
                 Show_data.Columns[6].Visible = false;
-                Show_data.Columns[7].Visible = false;
-
+                
                 RecargarImagen(listaArticulos[0].UrlImagen);
 
             }
@@ -67,5 +72,7 @@ namespace Actividad_2
             RecargarImagen(seleccionado.UrlImagen);
 
         }
+
+
     }
 }
