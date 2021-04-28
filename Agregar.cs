@@ -73,7 +73,7 @@ namespace Actividad_2
         {
             Close();
         }
-
+        //REVISAR
         private void FormAgregar_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("De verad querés salir? Perderás los datos", "Saliendo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel)
