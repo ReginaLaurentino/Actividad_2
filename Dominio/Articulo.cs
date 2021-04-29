@@ -21,6 +21,8 @@ namespace Dominio {
 
         public decimal Precio { get; set; }
 
+        public int ID { get; set; }
+
         public Articulo( string codigo, string nombre, string descripcion, string marca, string categoria, decimal precio)
         {
             Codigo = codigo;

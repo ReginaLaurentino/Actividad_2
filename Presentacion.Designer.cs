@@ -90,7 +90,7 @@ namespace Actividad_2
             this.B_Aceptar_Buscador.Name = "B_Aceptar_Buscador";
             this.B_Aceptar_Buscador.Size = new System.Drawing.Size(75, 23);
             this.B_Aceptar_Buscador.TabIndex = 3;
-            this.B_Aceptar_Buscador.Text = "Aceptar";
+            this.B_Aceptar_Buscador.Text = "Buscar";
             this.B_Aceptar_Buscador.UseVisualStyleBackColor = true;
             this.B_Aceptar_Buscador.Click += new System.EventHandler(this.B_Aceptar_Buscador_Click);
             // 
@@ -139,6 +139,7 @@ namespace Actividad_2
             this.B_Modificar.TabIndex = 7;
             this.B_Modificar.Text = "Modificar";
             this.B_Modificar.UseVisualStyleBackColor = true;
+            this.B_Modificar.Click += new System.EventHandler(this.B_Modificar_Click);
             // 
             // B_Eliminar
             // 
@@ -164,6 +165,7 @@ namespace Actividad_2
             this.B_Detalle.TabIndex = 9;
             this.B_Detalle.Text = "Detalle";
             this.B_Detalle.UseVisualStyleBackColor = true;
+            this.B_Detalle.Click += new System.EventHandler(this.B_Detalle_Click);
             // 
             // pictureBox1
             // 

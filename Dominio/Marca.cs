@@ -22,6 +22,7 @@ namespace Dominio {
             Nombre = nombre;
         }
 
+        public Marca() { }
         public override string ToString()
         {
             return Nombre;

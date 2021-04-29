@@ -100,7 +100,10 @@ insert into ARTICULOS values ('S01', 'Galaxy S10', 'Una canoa cara', 1, 1, 'http
 
 select * from ARTICULOS
 select * from MARCAS
+select * from CATEGORIAS
 select Codigo , Nombre, Descripcion, IdMarca, IdCategoria, Precio from ARTICULOS
 
 select Codigo , Nombre, ImagenUrl from ARTICULOS
 where Codigo = 'S01'
+
+select Id from MARCAS where Descripcion = 'Sony'

@@ -72,6 +72,8 @@ namespace Actividad_2
                 Show_data.Columns[4].Visible = false;
                 Show_data.Columns[5].Visible = false;
                 Show_data.Columns[6].Visible = false;
+
+               
                
 
 
@@ -99,11 +101,7 @@ namespace Actividad_2
 
         private void Text_Buscador_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Desplegable.SelectedItem.ToString() == "Precio")
-            {
-                if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
-                    e.Handled = true;
-            }
+            
 
         }
 
@@ -131,6 +129,19 @@ namespace Actividad_2
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void B_Modificar_Click(object sender, EventArgs e) {
+            FormModificar Modificar = new FormModificar();
+            
+            Modificar.ShowDialog();
+           
+        }
+
+        private void B_Detalle_Click(object sender, EventArgs e)
+        {
+            FormDetalle detalle = new FormDetalle();
+            detalle.ShowDialog();
         }
     }
 }
