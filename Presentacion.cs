@@ -72,9 +72,10 @@ namespace Actividad_2
                 Show_data.Columns[4].Visible = false;
                 Show_data.Columns[5].Visible = false;
                 Show_data.Columns[6].Visible = false;
+                Show_data.Columns[7].Visible = false;
 
-               
-               
+
+
 
 
                 RecargarImagen(listaArticulos[0].UrlImagen);
@@ -132,15 +133,22 @@ namespace Actividad_2
         }
 
         private void B_Modificar_Click(object sender, EventArgs e) {
-            FormModificar Modificar = new FormModificar();
             
+            Articulo ART = (Articulo)Show_data.CurrentRow.DataBoundItem;
+            FormModificar Modificar = new FormModificar(ART);
             Modificar.ShowDialog();
            
         }
 
         private void B_Detalle_Click(object sender, EventArgs e)
         {
+            
+
+            
+
+
             FormDetalle detalle = new FormDetalle();
+
             detalle.ShowDialog();
         }
     }

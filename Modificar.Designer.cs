@@ -267,6 +267,7 @@ namespace Actividad_2
             this.DGV.Location = new System.Drawing.Point(12, 237);
             this.DGV.Name = "DGV";
             this.DGV.RowTemplate.Height = 25;
+            this.DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV.Size = new System.Drawing.Size(1046, 245);
             this.DGV.TabIndex = 25;
             this.DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellContentClick);

@@ -13,15 +13,25 @@ namespace Negocio {
             AccesoDatos datos = new AccesoDatos();
 
             try {
-                datos.SetearConsulta("select Codigo , Nombre, ImagenUrl, Descripcion from ARTICULOS");
+                datos.SetearConsulta("select Codigo , Nombre, ARTICULOS.Descripcion , MARCAS.Descripcion as 'marcas', CATEGORIAS.Descripcion as 'cate' ,ImagenUrl, Precio, ARTICULOS.Id from ARTICULOS inner join MARCAS on MARCAS.Id = ARTICULOS.IdMarca INNER JOIN CATEGORIAS ON CATEGORIAS.Id = ARTICULOS.IdCategoria");
                 datos.EjecutarLectura();
-
-                while(datos.Lector.Read()) {
+                while (datos.Lector.Read())
+                {
                     Articulo aux = new Articulo();
-                    aux.Codigo = (string)datos.Lector["Codigo"];
-                    aux.Nombre = (string)datos.Lector["Nombre"];
-                    aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
-                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    aux.Marcas = new Marca();
+                    aux.Categorias = new Categoria();
+
+
+                    aux.Codigo = (string)datos.Lector[0];
+                    aux.Nombre = (string)datos.Lector[1];
+                    aux.Descripcion = (string)datos.Lector[2];
+                    aux.Marcas.Nombre = (string)datos.Lector["marcas"];
+                    aux.Categorias.Nombre = (string)datos.Lector["cate"];
+                    aux.UrlImagen = (string)datos.Lector[5];
+                    aux.Precio = (decimal)datos.Lector[6];
+                    aux.ID = (Int32)datos.Lector[7];
+
 
                     lista.Add(aux);
                 }

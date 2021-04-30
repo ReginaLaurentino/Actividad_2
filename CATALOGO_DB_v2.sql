@@ -98,12 +98,34 @@ insert into ARTICULOS values ('S01', 'Galaxy S10', 'Una canoa cara', 1, 1, 'http
 ('S56', 'Bravia 55', 'Alta tele', 3, 2, 'https://intercompras.com/product_thumb_keepratio_2.php?img=images/product/SONY_KDL-55W950A.jpg&w=650&h=450', 49500),
 ('A23', 'Apple TV', 'lindo loro', 2, 3, 'https://cnnespanol2.files.wordpress.com/2015/12/gadgets-mc3a1s-populares-apple-tv-2015-18.jpg?quality=100&strip=info&w=460&h=260&crop=1', 7850)
 
-select * from ARTICULOS
+
 select * from MARCAS
 select * from CATEGORIAS
-select Codigo , Nombre, Descripcion, IdMarca, IdCategoria, Precio from ARTICULOS
+
+select Codigo , Nombre, ARTICULOS.Descripcion , MARCAS.Descripcion as 'marcas', CATEGORIAS.Descripcion as 'cate' ,ImagenUrl, Precio from ARTICULOS inner join MARCAS 
+on MARCAS.Id= ARTICULOS.IdMarca 
+INNER JOIN CATEGORIAS ON CATEGORIAS.Id= ARTICULOS.IdCategoria
+
+
+WHERE Nombre = 'Play 4'
 
 select Codigo , Nombre, ImagenUrl from ARTICULOS
 where Codigo = 'S01'
 
 select Id from MARCAS where Descripcion = 'Sony'
+SELECT Id from CATEGORIAS Where Descripcion = 'Audio'
+Select Id from MARCAS where Descripcion like '%Sony%'
+
+select * from ARTICULOS where IdMarca = 3
+
+select Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl , Precio from ARTICULOS
+
+update  Articulos Set [ Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl , Precio]
+values [ ] where Articulos.Id = '5'
+
+update  Articulos Set [ Descripcion]
+values ['zarasa' ] where Articulos.Id = '5'
+select * from ARTICULOS
+
+insert into ARTICULOS values('Ah','' , '' ,1 ,2 ,'' ,700)
+update Articulos set Codigo = 'asd', Nombre = 'pepe', Descripcion = 'zarasa2', IdMarca = 1, IdCategoria =2, ImagenUrl ='holis', Precio = 5000 where Articulos.Id = '7'

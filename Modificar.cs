@@ -15,10 +15,17 @@ namespace Actividad_2
     public partial class FormModificar : Form
     {
         private List<Articulo> listaArticulos;
+        private Articulo Articulos= null;
         int ID;
         public FormModificar()
         {
             InitializeComponent();
+        }
+
+        public FormModificar(Articulo art)
+        {
+            InitializeComponent();
+            Articulos = art;
         }
 
         private void B_aceptar_MOD_Click(object sender, EventArgs e)
@@ -63,6 +70,19 @@ namespace Actividad_2
             try
             {
                 CargarGrilla();
+                if (Articulos != null)
+                {
+                    MOD_Text_codigo.Text = Articulos.Codigo;
+                    MOD_Text_nombre.Text = Articulos.Nombre;
+                    MOD_Text_descripcion.Text = Articulos.Descripcion;
+                    MOD_Text_imagen.Text = Articulos.UrlImagen;
+                    MOD_desplegable_marca.Text = Articulos.Marcas.Nombre;
+                    MOD_desplegable_categoria.Text = Articulos.Categorias.Nombre;
+                    MOD_Text_precio.Text = Articulos.Precio.ToString();
+                    ID = Articulos.ID;
+
+                }
+
                 MOD_desplegable_marca.DataSource = marcaNegocio.listar();
                 MOD_desplegable_categoria.DataSource = categoriaNegocio.listar();
 
@@ -117,12 +137,6 @@ namespace Actividad_2
             MOD_desplegable_categoria.Text = dvg.Cells[5].Value.ToString();
             MOD_Text_precio.Text = dvg.Cells[6].Value.ToString();
             ID = (Int32)dvg.Cells[7].Value;
-
-
-
-
-
-
         }
 
         private void MOD_B_aceptar_Click(object sender, EventArgs e) {
@@ -154,5 +168,7 @@ namespace Actividad_2
         {
             Close();
         }
+
+        
     }
 }

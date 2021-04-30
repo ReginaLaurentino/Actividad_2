@@ -98,18 +98,21 @@ namespace Actividad_2
             // 
             this.Show_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Show_data.Location = new System.Drawing.Point(23, 63);
+            this.Show_data.MultiSelect = false;
             this.Show_data.Name = "Show_data";
             this.Show_data.RowTemplate.Height = 25;
-            this.Show_data.Size = new System.Drawing.Size(294, 565);
+            this.Show_data.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Show_data.Size = new System.Drawing.Size(294, 305);
             this.Show_data.TabIndex = 4;
             this.Show_data.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Show_data_MouseClick);
             // 
             // ImagenProducto
             // 
             this.ImagenProducto.BackColor = System.Drawing.Color.Transparent;
-            this.ImagenProducto.Location = new System.Drawing.Point(323, 47);
+            this.ImagenProducto.Location = new System.Drawing.Point(323, 63);
             this.ImagenProducto.Name = "ImagenProducto";
-            this.ImagenProducto.Size = new System.Drawing.Size(685, 581);
+            this.ImagenProducto.Size = new System.Drawing.Size(399, 305);
+            this.ImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ImagenProducto.TabIndex = 5;
             this.ImagenProducto.TabStop = false;
             // 
@@ -120,7 +123,7 @@ namespace Actividad_2
             this.B_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.B_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Agregar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B_Agregar.Location = new System.Drawing.Point(34, 643);
+            this.B_Agregar.Location = new System.Drawing.Point(47, 386);
             this.B_Agregar.Name = "B_Agregar";
             this.B_Agregar.Size = new System.Drawing.Size(75, 23);
             this.B_Agregar.TabIndex = 6;
@@ -133,7 +136,7 @@ namespace Actividad_2
             this.B_Modificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_Modificar.BackgroundImage")));
             this.B_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Modificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B_Modificar.Location = new System.Drawing.Point(128, 643);
+            this.B_Modificar.Location = new System.Drawing.Point(147, 386);
             this.B_Modificar.Name = "B_Modificar";
             this.B_Modificar.Size = new System.Drawing.Size(75, 23);
             this.B_Modificar.TabIndex = 7;
@@ -147,7 +150,7 @@ namespace Actividad_2
             this.B_Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.B_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Eliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B_Eliminar.Location = new System.Drawing.Point(221, 643);
+            this.B_Eliminar.Location = new System.Drawing.Point(242, 386);
             this.B_Eliminar.Name = "B_Eliminar";
             this.B_Eliminar.Size = new System.Drawing.Size(75, 23);
             this.B_Eliminar.TabIndex = 8;
@@ -159,7 +162,7 @@ namespace Actividad_2
             this.B_Detalle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_Detalle.BackgroundImage")));
             this.B_Detalle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Detalle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B_Detalle.Location = new System.Drawing.Point(323, 643);
+            this.B_Detalle.Location = new System.Drawing.Point(342, 386);
             this.B_Detalle.Name = "B_Detalle";
             this.B_Detalle.Size = new System.Drawing.Size(75, 23);
             this.B_Detalle.TabIndex = 9;
@@ -182,7 +185,7 @@ namespace Actividad_2
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1032, 694);
+            this.ClientSize = new System.Drawing.Size(745, 420);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.B_Detalle);
             this.Controls.Add(this.B_Eliminar);
@@ -211,13 +214,13 @@ namespace Actividad_2
         private System.Windows.Forms.ComboBox Desplegable;
         private System.Windows.Forms.TextBox Text_Buscador;
         private System.Windows.Forms.Button B_Aceptar_Buscador;
-        private System.Windows.Forms.DataGridView Show_data;
         private System.Windows.Forms.PictureBox ImagenProducto;
         private System.Windows.Forms.Button B_Agregar;
         private System.Windows.Forms.Button B_Modificar;
         private System.Windows.Forms.Button B_Eliminar;
         private System.Windows.Forms.Button B_Detalle;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.DataGridView Show_data;
     }
 }
 
