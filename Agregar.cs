@@ -72,14 +72,24 @@ namespace Actividad_2
         private void B_Cancelar_Click(object sender, EventArgs e)
         {
             Close();
+               
         }
 
         private void FormAgregar_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("De verad querés salir? Perderás los datos", "Saliendo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel)
-                return;
+            try
+            {
+                DialogResult Dialog = MessageBox.Show("De verad querés salir? Perderás los datos", "Saliendo", MessageBoxButtons.YesNo);
+                if (Dialog == DialogResult.Yes) return;
+                else if (Dialog == DialogResult.No) e.Cancel = true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
-            Dispose();
+
+
         }
     }
 }

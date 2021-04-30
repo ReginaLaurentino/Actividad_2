@@ -303,6 +303,7 @@ namespace Actividad_2
             this.Controls.Add(this.Label_text_mod);
             this.Name = "FormModificar";
             this.Text = "Modificar Producto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormModificar_FormClosing);
             this.Load += new System.EventHandler(this.FormModificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();

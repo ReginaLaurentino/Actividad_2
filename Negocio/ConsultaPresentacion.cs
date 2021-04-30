@@ -327,5 +327,24 @@ namespace Negocio {
 
         }
 
+        public void eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("Delete from ARTICULOS where Id = " + id);
+                datos.EjectutarAccion();
+            }
+            catch ( Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
     }
 }

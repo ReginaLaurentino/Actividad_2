@@ -169,6 +169,19 @@ namespace Actividad_2
             Close();
         }
 
-        
+        private void FormModificar_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                DialogResult Dialog = MessageBox.Show("De verad querés salir? Perderás los datos", "Saliendo", MessageBoxButtons.YesNo);
+                if (Dialog == DialogResult.Yes) return;
+                else if (Dialog == DialogResult.No) e.Cancel = true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
     }
 }

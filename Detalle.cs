@@ -91,5 +91,24 @@ namespace Actividad_2
         {
             CargarGrilla();
         }
+
+        private void D_B_aceptar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void FormDetalle_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                DialogResult Dialog = MessageBox.Show("De verad querés salir?", "Saliendo", MessageBoxButtons.YesNo);
+                if (Dialog == DialogResult.Yes) return;
+                else if (Dialog == DialogResult.No) e.Cancel = true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -156,6 +156,7 @@ namespace Actividad_2
             this.B_Eliminar.TabIndex = 8;
             this.B_Eliminar.Text = "Eliminar";
             this.B_Eliminar.UseVisualStyleBackColor = true;
+            this.B_Eliminar.Click += new System.EventHandler(this.B_Eliminar_Click);
             // 
             // B_Detalle
             // 

@@ -142,14 +142,17 @@ namespace Actividad_2
 
         private void B_Detalle_Click(object sender, EventArgs e)
         {
-            
-
-            
-
-
             FormDetalle detalle = new FormDetalle();
 
             detalle.ShowDialog();
+        }
+
+        private void B_Eliminar_Click(object sender, EventArgs e)
+        { 
+            Articulo ART = (Articulo)Show_data.CurrentRow.DataBoundItem;
+            FormEliminar eliminar = new FormEliminar(ART);
+
+            eliminar.ShowDialog();
         }
     }
 }

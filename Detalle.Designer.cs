@@ -74,6 +74,7 @@ namespace Actividad_2
             this.D_B_aceptar.TabIndex = 2;
             this.D_B_aceptar.Text = "Salir";
             this.D_B_aceptar.UseVisualStyleBackColor = true;
+            this.D_B_aceptar.Click += new System.EventHandler(this.D_B_aceptar_Click);
             // 
             // D_label_text
             // 
@@ -170,6 +171,7 @@ namespace Actividad_2
             this.Controls.Add(this.D_data);
             this.Name = "FormDetalle";
             this.Text = "Detalle de producto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDetalle_FormClosing);
             this.Load += new System.EventHandler(this.FormDetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.D_data)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.D_Imagen)).EndInit();
