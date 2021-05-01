@@ -56,7 +56,6 @@ namespace Actividad_2
             this.Label_Buscador.Size = new System.Drawing.Size(53, 19);
             this.Label_Buscador.TabIndex = 0;
             this.Label_Buscador.Text = "Buscar";
-            this.Label_Buscador.Click += new System.EventHandler(this.Label_Buscador_Click);
             // 
             // Desplegable
             // 
@@ -79,11 +78,11 @@ namespace Actividad_2
             this.Text_Buscador.Name = "Text_Buscador";
             this.Text_Buscador.Size = new System.Drawing.Size(234, 23);
             this.Text_Buscador.TabIndex = 2;
-            this.Text_Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Text_Buscador_KeyPress);
             // 
             // B_Aceptar_Buscador
             // 
             this.B_Aceptar_Buscador.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_Aceptar_Buscador.BackgroundImage")));
+            this.B_Aceptar_Buscador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B_Aceptar_Buscador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Aceptar_Buscador.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.B_Aceptar_Buscador.Location = new System.Drawing.Point(449, 18);
@@ -120,6 +119,7 @@ namespace Actividad_2
             // 
             this.B_Agregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_Agregar.BackgroundImage")));
             this.B_Agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B_Agregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.B_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Agregar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -134,6 +134,7 @@ namespace Actividad_2
             // B_Modificar
             // 
             this.B_Modificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_Modificar.BackgroundImage")));
+            this.B_Modificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Modificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.B_Modificar.Location = new System.Drawing.Point(147, 386);
@@ -148,6 +149,7 @@ namespace Actividad_2
             // 
             this.B_Eliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_Eliminar.BackgroundImage")));
             this.B_Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.B_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Eliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.B_Eliminar.Location = new System.Drawing.Point(242, 386);
@@ -161,6 +163,7 @@ namespace Actividad_2
             // B_Detalle
             // 
             this.B_Detalle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_Detalle.BackgroundImage")));
+            this.B_Detalle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B_Detalle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Detalle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.B_Detalle.Location = new System.Drawing.Point(342, 386);

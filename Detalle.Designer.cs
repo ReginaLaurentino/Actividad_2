@@ -69,6 +69,7 @@ namespace Actividad_2
             // D_B_aceptar
             // 
             this.D_B_aceptar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("D_B_aceptar.BackgroundImage")));
+            this.D_B_aceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.D_B_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.D_B_aceptar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.D_B_aceptar.Location = new System.Drawing.Point(592, 426);
@@ -135,6 +136,7 @@ namespace Actividad_2
             // button1
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(693, 5);
             this.button1.Name = "button1";

@@ -82,6 +82,9 @@ namespace Actividad_2
             // E_desplegable
             // 
             this.E_desplegable.FormattingEnabled = true;
+            this.E_desplegable.Items.AddRange(new object[] {
+            "Codigo",
+            "Nombre"});
             this.E_desplegable.Location = new System.Drawing.Point(60, 36);
             this.E_desplegable.Name = "E_desplegable";
             this.E_desplegable.Size = new System.Drawing.Size(121, 23);
@@ -97,6 +100,7 @@ namespace Actividad_2
             // E_B_Aceptar
             // 
             this.E_B_Aceptar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("E_B_Aceptar.BackgroundImage")));
+            this.E_B_Aceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E_B_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.E_B_Aceptar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.E_B_Aceptar.Location = new System.Drawing.Point(351, 36);
@@ -105,6 +109,7 @@ namespace Actividad_2
             this.E_B_Aceptar.TabIndex = 4;
             this.E_B_Aceptar.Text = "Aceptar";
             this.E_B_Aceptar.UseVisualStyleBackColor = true;
+            this.E_B_Aceptar.Click += new System.EventHandler(this.E_B_Aceptar_Click);
             // 
             // E_imagen
             // 
@@ -119,6 +124,7 @@ namespace Actividad_2
             // E_B_Eliminar
             // 
             this.E_B_Eliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("E_B_Eliminar.BackgroundImage")));
+            this.E_B_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E_B_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.E_B_Eliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.E_B_Eliminar.Location = new System.Drawing.Point(200, 335);
@@ -132,6 +138,7 @@ namespace Actividad_2
             // E_B_cancelar
             // 
             this.E_B_cancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("E_B_cancelar.BackgroundImage")));
+            this.E_B_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E_B_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.E_B_cancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.E_B_cancelar.Location = new System.Drawing.Point(312, 335);

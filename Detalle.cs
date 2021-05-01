@@ -34,51 +34,61 @@ namespace Actividad_2
 
         private void FormDetalle_Load(object sender, EventArgs e)
         {
-
-            
-
-
-
+            Cargardatos();
         }
         
        
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Text.Text == "")
-                Text.BackColor = Color.Red;
-            else
-           if (Text.Text == "")
-                Text.BackColor = System.Drawing.SystemColors.Control;
+            
 
 
             ConsultaPresentacion datos = new ConsultaPresentacion();
 
             try
             {
+                if (Text.Text == "" && comboBox.SelectedIndex == -1)
+                    Text.BackColor = Color.Red;
+                else
+                 if (Text.Text == "" && comboBox.SelectedIndex == -1)
+                    Text.BackColor = System.Drawing.SystemColors.Control;
 
-                listaArticulos = datos.BusquedaModificar(comboBox.SelectedItem.ToString(), Text.Text);
-                textcodigo.Text = listaArticulos[0].Codigo.ToString();
-                textnombre.Text = listaArticulos[0].Nombre.ToString();
-                textprecio.Text = listaArticulos[0].Precio.ToString();
-                textdescripcion.Text = listaArticulos[0].Descripcion.ToString();
-                texturlimagen.Text = listaArticulos[0].UrlImagen.ToString();
-                textmarca.Text = listaArticulos[0].Marcas.Nombre.ToString();
-                textcategoria.Text = listaArticulos[0].Categorias.Nombre.ToString();
+                if(comboBox.SelectedIndex >=0 && Text.Text.Length > 1)
+                {
+                    Text.BackColor = System.Drawing.SystemColors.Control;
+                    listaArticulos = datos.Presentacion(comboBox.SelectedItem.ToString(), Text.Text);
+                    textcodigo.Text = listaArticulos[0].Codigo.ToString();
+                    textnombre.Text = listaArticulos[0].Nombre.ToString();
+                    textprecio.Text = listaArticulos[0].Precio.ToString();
+                    textdescripcion.Text = listaArticulos[0].Descripcion.ToString();
+                    texturlimagen.Text = listaArticulos[0].UrlImagen.ToString();
+                    textmarca.Text = listaArticulos[0].Marcas.Nombre.ToString();
+                    textcategoria.Text = listaArticulos[0].Categorias.Nombre.ToString();
+
+                    RecargarImagen(listaArticulos[0].UrlImagen);
+                }
+
                 
-                //ID = (Int32)listaArticulos[7].Codigo;
-
-                RecargarImagen(listaArticulos[0].UrlImagen);
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Complete la busqueda por favor");
             }
         }
 
         private void RecargarImagen(string img)
         {
-            D_Imagen.Load(img);
+            try
+            {
+                D_Imagen.Load(img);
+            }
+            catch (Exception)
+            {
+
+                D_Imagen.Load("https://www.meme-arsenal.com/memes/c9e6371faa3b57eaee1d35595ca8e910.jpg");
+            }
+           
         }
         private void D_B_aceptar_Click(object sender, EventArgs e)
         {

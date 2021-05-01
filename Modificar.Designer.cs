@@ -53,8 +53,11 @@ namespace Actividad_2
             this.MOD_desplegable_categoria = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.DGV = new System.Windows.Forms.DataGridView();
+            this.picture = new System.Windows.Forms.PictureBox();
+            this.B_vertodo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
             // 
             // Label_text_mod
@@ -93,13 +96,14 @@ namespace Actividad_2
             // 
             this.Text_desple_mod.Location = new System.Drawing.Point(617, 6);
             this.Text_desple_mod.Name = "Text_desple_mod";
-            this.Text_desple_mod.Size = new System.Drawing.Size(106, 23);
+            this.Text_desple_mod.Size = new System.Drawing.Size(178, 23);
             this.Text_desple_mod.TabIndex = 3;
             // 
             // B_aceptar_MOD
             // 
+            this.B_aceptar_MOD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B_aceptar_MOD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.B_aceptar_MOD.Location = new System.Drawing.Point(762, 9);
+            this.B_aceptar_MOD.Location = new System.Drawing.Point(829, 6);
             this.B_aceptar_MOD.Name = "B_aceptar_MOD";
             this.B_aceptar_MOD.Size = new System.Drawing.Size(75, 23);
             this.B_aceptar_MOD.TabIndex = 4;
@@ -111,7 +115,7 @@ namespace Actividad_2
             // 
             this.Mod_label_codigo.AutoSize = true;
             this.Mod_label_codigo.BackColor = System.Drawing.Color.Transparent;
-            this.Mod_label_codigo.Location = new System.Drawing.Point(18, 47);
+            this.Mod_label_codigo.Location = new System.Drawing.Point(12, 50);
             this.Mod_label_codigo.Name = "Mod_label_codigo";
             this.Mod_label_codigo.Size = new System.Drawing.Size(49, 15);
             this.Mod_label_codigo.TabIndex = 6;
@@ -121,7 +125,7 @@ namespace Actividad_2
             // 
             this.MOD_label_nombre.AutoSize = true;
             this.MOD_label_nombre.BackColor = System.Drawing.Color.Transparent;
-            this.MOD_label_nombre.Location = new System.Drawing.Point(338, 47);
+            this.MOD_label_nombre.Location = new System.Drawing.Point(12, 218);
             this.MOD_label_nombre.Name = "MOD_label_nombre";
             this.MOD_label_nombre.Size = new System.Drawing.Size(51, 15);
             this.MOD_label_nombre.TabIndex = 7;
@@ -131,7 +135,7 @@ namespace Actividad_2
             // 
             this.MOD_label_descripcion.AutoSize = true;
             this.MOD_label_descripcion.BackColor = System.Drawing.Color.Transparent;
-            this.MOD_label_descripcion.Location = new System.Drawing.Point(673, 47);
+            this.MOD_label_descripcion.Location = new System.Drawing.Point(12, 326);
             this.MOD_label_descripcion.Name = "MOD_label_descripcion";
             this.MOD_label_descripcion.Size = new System.Drawing.Size(69, 15);
             this.MOD_label_descripcion.TabIndex = 8;
@@ -141,7 +145,7 @@ namespace Actividad_2
             // 
             this.MOD_label_Precio.AutoSize = true;
             this.MOD_label_Precio.BackColor = System.Drawing.Color.Transparent;
-            this.MOD_label_Precio.Location = new System.Drawing.Point(18, 101);
+            this.MOD_label_Precio.Location = new System.Drawing.Point(12, 101);
             this.MOD_label_Precio.Name = "MOD_label_Precio";
             this.MOD_label_Precio.Size = new System.Drawing.Size(40, 15);
             this.MOD_label_Precio.TabIndex = 9;
@@ -151,7 +155,7 @@ namespace Actividad_2
             // 
             this.MOD_label_imagen.AutoSize = true;
             this.MOD_label_imagen.BackColor = System.Drawing.Color.Transparent;
-            this.MOD_label_imagen.Location = new System.Drawing.Point(338, 101);
+            this.MOD_label_imagen.Location = new System.Drawing.Point(12, 268);
             this.MOD_label_imagen.Name = "MOD_label_imagen";
             this.MOD_label_imagen.Size = new System.Drawing.Size(65, 15);
             this.MOD_label_imagen.TabIndex = 10;
@@ -161,7 +165,7 @@ namespace Actividad_2
             // 
             this.MOD_label_Marca.AutoSize = true;
             this.MOD_label_Marca.BackColor = System.Drawing.Color.Transparent;
-            this.MOD_label_Marca.Location = new System.Drawing.Point(338, 163);
+            this.MOD_label_Marca.Location = new System.Drawing.Point(12, 383);
             this.MOD_label_Marca.Name = "MOD_label_Marca";
             this.MOD_label_Marca.Size = new System.Drawing.Size(40, 15);
             this.MOD_label_Marca.TabIndex = 11;
@@ -179,8 +183,9 @@ namespace Actividad_2
             // 
             // MOD_B_aceptar
             // 
+            this.MOD_B_aceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MOD_B_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.MOD_B_aceptar.Location = new System.Drawing.Point(842, 100);
+            this.MOD_B_aceptar.Location = new System.Drawing.Point(69, 448);
             this.MOD_B_aceptar.Name = "MOD_B_aceptar";
             this.MOD_B_aceptar.Size = new System.Drawing.Size(75, 23);
             this.MOD_B_aceptar.TabIndex = 13;
@@ -190,8 +195,9 @@ namespace Actividad_2
             // 
             // MOD_B_cancelar
             // 
+            this.MOD_B_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MOD_B_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.MOD_B_cancelar.Location = new System.Drawing.Point(842, 141);
+            this.MOD_B_cancelar.Location = new System.Drawing.Point(197, 448);
             this.MOD_B_cancelar.Name = "MOD_B_cancelar";
             this.MOD_B_cancelar.Size = new System.Drawing.Size(75, 23);
             this.MOD_B_cancelar.TabIndex = 14;
@@ -201,35 +207,36 @@ namespace Actividad_2
             // 
             // MOD_Text_codigo
             // 
-            this.MOD_Text_codigo.Location = new System.Drawing.Point(75, 44);
+            this.MOD_Text_codigo.Location = new System.Drawing.Point(87, 47);
             this.MOD_Text_codigo.Name = "MOD_Text_codigo";
             this.MOD_Text_codigo.Size = new System.Drawing.Size(224, 23);
             this.MOD_Text_codigo.TabIndex = 16;
             // 
             // MOD_Text_nombre
             // 
-            this.MOD_Text_nombre.Location = new System.Drawing.Point(408, 44);
+            this.MOD_Text_nombre.Location = new System.Drawing.Point(87, 215);
             this.MOD_Text_nombre.Name = "MOD_Text_nombre";
             this.MOD_Text_nombre.Size = new System.Drawing.Size(224, 23);
             this.MOD_Text_nombre.TabIndex = 17;
             // 
             // MOD_Text_descripcion
             // 
-            this.MOD_Text_descripcion.Location = new System.Drawing.Point(782, 47);
+            this.MOD_Text_descripcion.Location = new System.Drawing.Point(87, 323);
             this.MOD_Text_descripcion.Name = "MOD_Text_descripcion";
             this.MOD_Text_descripcion.Size = new System.Drawing.Size(224, 23);
             this.MOD_Text_descripcion.TabIndex = 18;
             // 
             // MOD_Text_precio
             // 
-            this.MOD_Text_precio.Location = new System.Drawing.Point(75, 98);
+            this.MOD_Text_precio.Location = new System.Drawing.Point(87, 100);
             this.MOD_Text_precio.Name = "MOD_Text_precio";
             this.MOD_Text_precio.Size = new System.Drawing.Size(224, 23);
             this.MOD_Text_precio.TabIndex = 19;
             // 
             // MOD_Text_imagen
             // 
-            this.MOD_Text_imagen.Location = new System.Drawing.Point(408, 101);
+            this.MOD_Text_imagen.Location = new System.Drawing.Point(87, 268);
+            this.MOD_Text_imagen.MaxLength = 99999999;
             this.MOD_Text_imagen.Name = "MOD_Text_imagen";
             this.MOD_Text_imagen.Size = new System.Drawing.Size(224, 23);
             this.MOD_Text_imagen.TabIndex = 21;
@@ -237,7 +244,7 @@ namespace Actividad_2
             // MOD_desplegable_marca
             // 
             this.MOD_desplegable_marca.FormattingEnabled = true;
-            this.MOD_desplegable_marca.Location = new System.Drawing.Point(408, 155);
+            this.MOD_desplegable_marca.Location = new System.Drawing.Point(87, 383);
             this.MOD_desplegable_marca.Name = "MOD_desplegable_marca";
             this.MOD_desplegable_marca.Size = new System.Drawing.Size(224, 23);
             this.MOD_desplegable_marca.TabIndex = 22;
@@ -245,7 +252,7 @@ namespace Actividad_2
             // MOD_desplegable_categoria
             // 
             this.MOD_desplegable_categoria.FormattingEnabled = true;
-            this.MOD_desplegable_categoria.Location = new System.Drawing.Point(76, 160);
+            this.MOD_desplegable_categoria.Location = new System.Drawing.Point(87, 163);
             this.MOD_desplegable_categoria.Name = "MOD_desplegable_categoria";
             this.MOD_desplegable_categoria.Size = new System.Drawing.Size(224, 23);
             this.MOD_desplegable_categoria.TabIndex = 23;
@@ -254,7 +261,7 @@ namespace Actividad_2
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(986, 488);
+            this.pictureBox1.Location = new System.Drawing.Point(1042, 423);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(103, 83);
             this.pictureBox1.TabIndex = 24;
@@ -264,20 +271,45 @@ namespace Actividad_2
             // 
             this.DGV.BackgroundColor = System.Drawing.Color.Gray;
             this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV.Location = new System.Drawing.Point(12, 237);
+            this.DGV.Location = new System.Drawing.Point(334, 46);
             this.DGV.Name = "DGV";
             this.DGV.RowTemplate.Height = 25;
             this.DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV.Size = new System.Drawing.Size(1046, 245);
+            this.DGV.Size = new System.Drawing.Size(449, 360);
             this.DGV.TabIndex = 25;
             this.DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellContentClick);
+            // 
+            // picture
+            // 
+            this.picture.BackColor = System.Drawing.Color.Transparent;
+            this.picture.Location = new System.Drawing.Point(804, 46);
+            this.picture.Name = "picture";
+            this.picture.Size = new System.Drawing.Size(304, 360);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture.TabIndex = 26;
+            this.picture.TabStop = false;
+            // 
+            // B_vertodo
+            // 
+            this.B_vertodo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_vertodo.BackgroundImage")));
+            this.B_vertodo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.B_vertodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.B_vertodo.Location = new System.Drawing.Point(925, 6);
+            this.B_vertodo.Name = "B_vertodo";
+            this.B_vertodo.Size = new System.Drawing.Size(75, 23);
+            this.B_vertodo.TabIndex = 27;
+            this.B_vertodo.Text = "Ver todo";
+            this.B_vertodo.UseVisualStyleBackColor = true;
+            this.B_vertodo.Click += new System.EventHandler(this.B_vertodo_Click);
             // 
             // FormModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1070, 568);
+            this.ClientSize = new System.Drawing.Size(1139, 510);
+            this.Controls.Add(this.B_vertodo);
+            this.Controls.Add(this.picture);
             this.Controls.Add(this.DGV);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.MOD_desplegable_categoria);
@@ -307,6 +339,7 @@ namespace Actividad_2
             this.Load += new System.EventHandler(this.FormModificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +370,7 @@ namespace Actividad_2
         private System.Windows.Forms.ComboBox MOD_desplegable_categoria;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView DGV;
+        private System.Windows.Forms.PictureBox picture;
+        private System.Windows.Forms.Button B_vertodo;
     }
 }

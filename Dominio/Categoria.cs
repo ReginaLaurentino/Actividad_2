@@ -11,20 +11,17 @@ namespace Dominio {
 
         public string Nombre { get; set; }
 
-        public Categoria(string nombre)
-        {
+        public Categoria(string nombre)  {
             Nombre = nombre;
         }
 
-        public Categoria(int id, string nombre)
-        {
+        public Categoria(int id, string nombre)   {
             ID = id;
             Nombre = nombre;
         }
 
         public Categoria() { }
-        public override string ToString()
-        {
+        public override string ToString()      {
             return Nombre;
         }
 

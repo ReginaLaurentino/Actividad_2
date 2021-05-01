@@ -100,3 +100,5 @@ C:\Users\Laura\Desktop\prog3\obj\Debug\net5.0-windows\Presentacion.dll
 C:\Users\Laura\Desktop\prog3\obj\Debug\net5.0-windows\ref\Presentacion.dll
 C:\Users\Laura\Desktop\prog3\obj\Debug\net5.0-windows\Presentacion.pdb
 C:\Users\Laura\Desktop\prog3\obj\Debug\net5.0-windows\Presentacion.genruntimeconfig.cache
+E:\UTN\PROG 3\ACTIVIDAD 2\obj\Debug\net5.0-windows\Presentacion.FormMarca.resources
+E:\UTN\PROG 3\ACTIVIDAD 2\obj\Debug\net5.0-windows\Presentacion.AgregarCategoria.resources

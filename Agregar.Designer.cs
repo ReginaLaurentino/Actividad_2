@@ -48,6 +48,8 @@ namespace Actividad_2
             this.B_Cancelar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Agregarmarca = new System.Windows.Forms.Button();
+            this.b_categoria = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,6 +185,7 @@ namespace Actividad_2
             // B_Aceptar
             // 
             this.B_Aceptar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_Aceptar.BackgroundImage")));
+            this.B_Aceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Aceptar.Location = new System.Drawing.Point(79, 347);
             this.B_Aceptar.Name = "B_Aceptar";
@@ -195,6 +198,7 @@ namespace Actividad_2
             // B_Cancelar
             // 
             this.B_Cancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_Cancelar.BackgroundImage")));
+            this.B_Cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.B_Cancelar.Location = new System.Drawing.Point(181, 346);
             this.B_Cancelar.Name = "B_Cancelar";
@@ -225,12 +229,40 @@ namespace Actividad_2
             this.label1.TabIndex = 19;
             this.label1.Text = "Ingrese los datos del nuevo articulo:";
             // 
+            // Agregarmarca
+            // 
+            this.Agregarmarca.BackColor = System.Drawing.Color.Transparent;
+            this.Agregarmarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Agregarmarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Agregarmarca.Location = new System.Drawing.Point(353, 249);
+            this.Agregarmarca.Name = "Agregarmarca";
+            this.Agregarmarca.Size = new System.Drawing.Size(42, 23);
+            this.Agregarmarca.TabIndex = 20;
+            this.Agregarmarca.Text = "+";
+            this.Agregarmarca.UseVisualStyleBackColor = false;
+            this.Agregarmarca.Click += new System.EventHandler(this.Agregarmarca_Click);
+            // 
+            // b_categoria
+            // 
+            this.b_categoria.BackColor = System.Drawing.Color.Transparent;
+            this.b_categoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b_categoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.b_categoria.Location = new System.Drawing.Point(353, 289);
+            this.b_categoria.Name = "b_categoria";
+            this.b_categoria.Size = new System.Drawing.Size(42, 23);
+            this.b_categoria.TabIndex = 21;
+            this.b_categoria.Text = "+";
+            this.b_categoria.UseVisualStyleBackColor = false;
+            this.b_categoria.Click += new System.EventHandler(this.b_categoria_Click);
+            // 
             // FormAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(373, 414);
+            this.ClientSize = new System.Drawing.Size(407, 414);
+            this.Controls.Add(this.b_categoria);
+            this.Controls.Add(this.Agregarmarca);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.B_Cancelar);
@@ -278,5 +310,7 @@ namespace Actividad_2
         private System.Windows.Forms.Button B_Cancelar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Agregarmarca;
+        private System.Windows.Forms.Button b_categoria;
     }
 }

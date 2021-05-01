@@ -31,11 +31,10 @@ namespace Negocio {
             lector = comando.ExecuteReader();
         }
         
-        public void cerrarConexion()
-        {
+        public void cerrarConexion() {
             if (lector != null)
                 lector.Close();
-            conexion.Close();
+                conexion.Close();
         }
 
 
@@ -44,8 +43,7 @@ namespace Negocio {
 
         }
 
-        internal void EjectutarAccion()
-        {
+        internal void EjectutarAccion() {
             comando.Connection = conexion;
             conexion.Open();
             comando.ExecuteNonQuery();

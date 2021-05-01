@@ -15,10 +15,9 @@ namespace Negocio {
             try {
                 datos.SetearConsulta("select Codigo , Nombre, ARTICULOS.Descripcion , MARCAS.Descripcion as 'marcas', CATEGORIAS.Descripcion as 'cate' ,ImagenUrl, Precio, ARTICULOS.Id from ARTICULOS inner join MARCAS on MARCAS.Id = ARTICULOS.IdMarca INNER JOIN CATEGORIAS ON CATEGORIAS.Id = ARTICULOS.IdCategoria");
                 datos.EjecutarLectura();
-                while (datos.Lector.Read())
-                {
-                    Articulo aux = new Articulo();
 
+                while (datos.Lector.Read()) {
+                    Articulo aux = new Articulo();
                     aux.Marcas = new Marca();
                     aux.Categorias = new Categoria();
 
@@ -44,9 +43,7 @@ namespace Negocio {
             }
             finally {
                 datos.cerrarConexion();
-            }
-
-            
+            }         
 
 
 
@@ -56,20 +53,16 @@ namespace Negocio {
         {
             AccesoDatos datos = new AccesoDatos();
 
-            try
-            {
+            try {
                 string valores = "values('" + nuevo.Codigo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', " + nuevo.Marcas.ID + ", " + nuevo.Categorias.ID + ", '" + nuevo.UrlImagen + "', " + nuevo.Precio + ")";
                 datos.SetearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) " + valores);
-
                 datos.EjectutarAccion();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 throw ex;
             }
 
-            finally
-            {
+            finally {
                 datos.cerrarConexion();
             }
         }
@@ -98,16 +91,24 @@ namespace Negocio {
                 {
                     valores = " " + columna + " = '" + texto + "' ";
                 }
-                
-                
+                               
 
-                datos.SetearConsulta("select Codigo , Nombre, ImagenUrl from ARTICULOS Where" + valores);
+                datos.SetearConsulta("select Codigo , Nombre, ARTICULOS.Descripcion , MARCAS.Descripcion as 'marcas', CATEGORIAS.Descripcion as 'cate' ,ImagenUrl, Precio, ARTICULOS.Id from ARTICULOS inner join MARCAS on MARCAS.Id = ARTICULOS.IdMarca INNER JOIN CATEGORIAS ON CATEGORIAS.Id = ARTICULOS.IdCategoria Where " + valores);
                 datos.EjecutarLectura();
                 while (datos.Lector.Read()) {
                     Articulo aux = new Articulo();
-                    aux.Codigo = (string)datos.Lector["Codigo"];
-                    aux.Nombre = (string)datos.Lector["Nombre"];
-                    aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
+                    aux.Marcas = new Marca();
+                    aux.Categorias = new Categoria();
+
+
+                    aux.Codigo = (string)datos.Lector[0];
+                    aux.Nombre = (string)datos.Lector[1];
+                    aux.Descripcion = (string)datos.Lector[2];
+                    aux.Marcas.Nombre = (string)datos.Lector["marcas"];
+                    aux.Categorias.Nombre = (string)datos.Lector["cate"];
+                    aux.UrlImagen = (string)datos.Lector[5];
+                    aux.Precio = (decimal)datos.Lector[6];
+                    aux.ID = (Int32)datos.Lector[7];
 
                     lista.Add(aux);
                 }
@@ -138,12 +139,9 @@ namespace Negocio {
                 datos.SetearConsulta(string.Format("select Id from MARCAS where Descripcion like '%{0}%'", marca));
                 datos.EjecutarLectura();
 
-                while (datos.Lector.Read())
-                {
+                while (datos.Lector.Read()){
                     ID = (Int32)datos.Lector["Id"];
-                }
-
-                
+                }  
 
 
             }
@@ -161,165 +159,39 @@ namespace Negocio {
             int ID = 0;
             AccesoDatos datos = new AccesoDatos();
 
-            try
-            {
+            try {
                 
                 datos.SetearConsulta(string.Format("select Id from CATEGORIAS where Descripcion like '%{0}%'", categoria));
                 datos.EjecutarLectura();
 
-                while (datos.Lector.Read())
-                {
+                while (datos.Lector.Read()) {
                     ID = (Int32)datos.Lector["Id"];
                 }
-
-
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex)  {
 
                 throw ex;
             }
-            finally
-            {
+            finally {
                 datos.cerrarConexion();
             }
             return ID;
-
-
-
         }
-
-
-        public List<Articulo> BusquedaModificar(string columna, string texto)
-        {
-            List<Articulo> lista = new List<Articulo>();
-            AccesoDatos datos = new AccesoDatos();
-            string valores;
-            
-            try
-            {
-
-                    valores = " " + columna + " = '" + texto + "' ";
-
-
-
-
-                datos.SetearConsulta("select Codigo , Nombre, ARTICULOS.Descripcion , MARCAS.Descripcion as 'marcas', CATEGORIAS.Descripcion as 'cate' ,ImagenUrl, Precio, ARTICULOS.Id from ARTICULOS inner join MARCAS on MARCAS.Id = ARTICULOS.IdMarca INNER JOIN CATEGORIAS ON CATEGORIAS.Id = ARTICULOS.IdCategoria Where " + valores);
-                datos.EjecutarLectura();
-                while (datos.Lector.Read())
-                {
-                    Articulo aux = new Articulo();
-
-                    aux.Marcas = new Marca();
-                    aux.Categorias = new Categoria();
-
-
-                    aux.Codigo = (string)datos.Lector[0];
-                    aux.Nombre = (string)datos.Lector[1];
-                    aux.Descripcion = (string)datos.Lector[2];
-                    aux.Marcas.Nombre = (string)datos.Lector["marcas"];
-                    aux.Categorias.Nombre = (string)datos.Lector["cate"];
-                    aux.UrlImagen = (string)datos.Lector[5];
-                    aux.Precio = (decimal)datos.Lector[6];
-                    aux.ID = (Int32)datos.Lector[7];
-
-
-                    lista.Add(aux);
-                }
-
-                return lista;
-
-            }
-
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-
-            finally
-            {
-                datos.cerrarConexion();
-            }
-
-
-
-
-        }
-
-        public List<Articulo> ListadoenModificar()
-        {
-            List<Articulo> lista = new List<Articulo>();
-            AccesoDatos datos = new AccesoDatos();
-            
-
-            try
-            {
-
-                
-                datos.SetearConsulta("select Codigo , Nombre, ARTICULOS.Descripcion , MARCAS.Descripcion as 'marcas', CATEGORIAS.Descripcion as 'cate' ,ImagenUrl, Precio, ARTICULOS.Id from ARTICULOS inner join MARCAS on MARCAS.Id = ARTICULOS.IdMarca INNER JOIN CATEGORIAS ON CATEGORIAS.Id = ARTICULOS.IdCategoria");
-                datos.EjecutarLectura();
-                while (datos.Lector.Read())
-                {
-                    Articulo aux = new Articulo();
-
-                    aux.Marcas = new Marca();
-                    aux.Categorias = new Categoria();
-
-                    
-                    aux.Codigo = (string)datos.Lector[0];
-                    aux.Nombre = (string)datos.Lector[1];
-                    aux.Descripcion = (string)datos.Lector[2];
-                    aux.Marcas.Nombre = (string)datos.Lector["marcas"];
-                    aux.Categorias.Nombre = (string)datos.Lector["cate"];
-                    aux.UrlImagen = (string)datos.Lector[5];
-                    aux.Precio = (decimal)datos.Lector[6];
-                    aux.ID = (Int32)datos.Lector[7];
-
-
-                    lista.Add(aux);
-                }
-
-                return lista;
-
-
-
-            }
-
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-
-            finally
-            {
-                datos.cerrarConexion();
-            }
-
-
-
-
-
-        }
+               
 
         public void Modificar(string consulta) {
             AccesoDatos datos = new AccesoDatos();
 
-            try
-            {
+            try {
                 
                 datos.SetearConsulta(consulta);
-
                 datos.EjectutarAccion();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 throw ex;
             }
 
-            finally
-            {
+            finally {
                 datos.cerrarConexion();
             }
 
@@ -327,15 +199,31 @@ namespace Negocio {
 
         }
 
-        public void eliminar(int id)
-        {
+        public void eliminar(int id) {
             AccesoDatos datos = new AccesoDatos();
-            try
-            {
+            try {
                 datos.SetearConsulta("Delete from ARTICULOS where Id = " + id);
                 datos.EjectutarAccion();
             }
-            catch ( Exception ex)
+            catch ( Exception ex) {
+
+                throw ex;
+            }
+            finally {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void AgregarMarca (string marca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try {
+                datos.SetearConsulta("insert into MARCAS values('" + marca + "')");
+                datos.EjectutarAccion();
+
+            }
+            catch (Exception ex)
             {
 
                 throw ex;
@@ -344,7 +232,34 @@ namespace Negocio {
             {
                 datos.cerrarConexion();
             }
+
+
         }
+
+        public void AgregarCategoria(string categoria)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+               
+                datos.SetearConsulta("insert into Categorias values('" + categoria + "')");
+                datos.EjectutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+
+        }
+
 
     }
 }
