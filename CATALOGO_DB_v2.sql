@@ -128,4 +128,11 @@ values ['zarasa' ] where Articulos.Id = '5'
 select * from ARTICULOS
 
 insert into ARTICULOS values('Ah','' , '' ,1 ,2 ,'' ,700)
-update Articulos set Codigo = 'asd', Nombre = 'pepe', Descripcion = 'zarasa2', IdMarca = 1, IdCategoria =2, ImagenUrl ='holis', Precio = 5000 where Articulos.Id = '7'
+
+insert into MARCAS values ('Industriial')
+select * from MARCAS
+insert into Categorias values ('Regina')
+select * FROM CATEGORIAS
+
+
+update ARTICULOS set ImagenUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0_BJYJTF5aKwDam6ZK90cLOE8RCXiLq2UqA&usqp=CAU' where Id = 9

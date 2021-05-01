@@ -52,11 +52,8 @@ namespace Actividad_2
             this.MOD_desplegable_marca = new System.Windows.Forms.ComboBox();
             this.MOD_desplegable_categoria = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.DGV = new System.Windows.Forms.DataGridView();
             this.picture = new System.Windows.Forms.PictureBox();
-            this.B_vertodo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +72,7 @@ namespace Actividad_2
             // 
             this.label_buscar.AutoSize = true;
             this.label_buscar.BackColor = System.Drawing.Color.Transparent;
-            this.label_buscar.Location = new System.Drawing.Point(421, 9);
+            this.label_buscar.Location = new System.Drawing.Point(230, 10);
             this.label_buscar.Name = "label_buscar";
             this.label_buscar.Size = new System.Drawing.Size(42, 15);
             this.label_buscar.TabIndex = 1;
@@ -87,14 +84,14 @@ namespace Actividad_2
             this.Desplegable_Modificar.Items.AddRange(new object[] {
             "Codigo",
             "Nombre"});
-            this.Desplegable_Modificar.Location = new System.Drawing.Point(469, 6);
+            this.Desplegable_Modificar.Location = new System.Drawing.Point(278, 6);
             this.Desplegable_Modificar.Name = "Desplegable_Modificar";
             this.Desplegable_Modificar.Size = new System.Drawing.Size(121, 23);
             this.Desplegable_Modificar.TabIndex = 2;
             // 
             // Text_desple_mod
             // 
-            this.Text_desple_mod.Location = new System.Drawing.Point(617, 6);
+            this.Text_desple_mod.Location = new System.Drawing.Point(405, 6);
             this.Text_desple_mod.Name = "Text_desple_mod";
             this.Text_desple_mod.Size = new System.Drawing.Size(178, 23);
             this.Text_desple_mod.TabIndex = 3;
@@ -103,7 +100,7 @@ namespace Actividad_2
             // 
             this.B_aceptar_MOD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B_aceptar_MOD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.B_aceptar_MOD.Location = new System.Drawing.Point(829, 6);
+            this.B_aceptar_MOD.Location = new System.Drawing.Point(604, 5);
             this.B_aceptar_MOD.Name = "B_aceptar_MOD";
             this.B_aceptar_MOD.Size = new System.Drawing.Size(75, 23);
             this.B_aceptar_MOD.TabIndex = 4;
@@ -261,56 +258,29 @@ namespace Actividad_2
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1042, 423);
+            this.pictureBox1.Location = new System.Drawing.Point(576, 415);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(103, 83);
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // DGV
-            // 
-            this.DGV.BackgroundColor = System.Drawing.Color.Gray;
-            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV.Location = new System.Drawing.Point(334, 46);
-            this.DGV.Name = "DGV";
-            this.DGV.RowTemplate.Height = 25;
-            this.DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV.Size = new System.Drawing.Size(449, 360);
-            this.DGV.TabIndex = 25;
-            this.DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellContentClick);
-            // 
             // picture
             // 
             this.picture.BackColor = System.Drawing.Color.Transparent;
-            this.picture.Location = new System.Drawing.Point(804, 46);
+            this.picture.Location = new System.Drawing.Point(335, 46);
             this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(304, 360);
+            this.picture.Size = new System.Drawing.Size(344, 360);
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picture.TabIndex = 26;
             this.picture.TabStop = false;
-            // 
-            // B_vertodo
-            // 
-            this.B_vertodo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_vertodo.BackgroundImage")));
-            this.B_vertodo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.B_vertodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.B_vertodo.Location = new System.Drawing.Point(925, 6);
-            this.B_vertodo.Name = "B_vertodo";
-            this.B_vertodo.Size = new System.Drawing.Size(75, 23);
-            this.B_vertodo.TabIndex = 27;
-            this.B_vertodo.Text = "Ver todo";
-            this.B_vertodo.UseVisualStyleBackColor = true;
-            this.B_vertodo.Click += new System.EventHandler(this.B_vertodo_Click);
             // 
             // FormModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1139, 510);
-            this.Controls.Add(this.B_vertodo);
+            this.ClientSize = new System.Drawing.Size(702, 510);
             this.Controls.Add(this.picture);
-            this.Controls.Add(this.DGV);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.MOD_desplegable_categoria);
             this.Controls.Add(this.MOD_desplegable_marca);
@@ -338,7 +308,6 @@ namespace Actividad_2
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormModificar_FormClosing);
             this.Load += new System.EventHandler(this.FormModificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -369,8 +338,6 @@ namespace Actividad_2
         private System.Windows.Forms.ComboBox MOD_desplegable_marca;
         private System.Windows.Forms.ComboBox MOD_desplegable_categoria;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView DGV;
         private System.Windows.Forms.PictureBox picture;
-        private System.Windows.Forms.Button B_vertodo;
     }
 }
