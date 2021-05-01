@@ -32,3 +32,4 @@ C:\Users\Laura\Desktop\prog3\Dominio\obj\Debug\net5.0-windows\Dominio.csproj.Cor
 C:\Users\Laura\Desktop\prog3\Dominio\obj\Debug\net5.0-windows\Dominio.dll
 C:\Users\Laura\Desktop\prog3\Dominio\obj\Debug\net5.0-windows\ref\Dominio.dll
 C:\Users\Laura\Desktop\prog3\Dominio\obj\Debug\net5.0-windows\Dominio.pdb
+E:\UTN\PROG 3\ACTIVIDAD 2\Dominio\obj\Debug\net5.0-windows\Dominio.csprojAssemblyReference.cache

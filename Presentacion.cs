@@ -90,7 +90,16 @@ namespace Actividad_2
 
         private void RecargarImagen(string img)
         {
-            ImagenProducto.Load(img);
+            try
+            {
+                ImagenProducto.Load(img);
+            }
+            catch (Exception)
+            {
+
+                ImagenProducto.Load("https://www.meme-arsenal.com/memes/c9e6371faa3b57eaee1d35595ca8e910.jpg");
+            }
+            
         }
 
         private void Show_data_MouseClick(object sender, MouseEventArgs e)
@@ -142,7 +151,8 @@ namespace Actividad_2
 
         private void B_Detalle_Click(object sender, EventArgs e)
         {
-            FormDetalle detalle = new FormDetalle();
+            Articulo ART = (Articulo)Show_data.CurrentRow.DataBoundItem;
+            FormDetalle detalle = new FormDetalle(ART);
 
             detalle.ShowDialog();
         }
