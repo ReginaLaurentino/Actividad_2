@@ -179,7 +179,7 @@ namespace Actividad_2
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(624, 362);
+            this.pictureBox1.Location = new System.Drawing.Point(622, 374);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 84);
             this.pictureBox1.TabIndex = 10;
@@ -204,7 +204,7 @@ namespace Actividad_2
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(726, 442);
+            this.ClientSize = new System.Drawing.Size(726, 448);
             this.Controls.Add(this.bot_vertodo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.B_Detalle);

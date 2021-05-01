@@ -64,7 +64,7 @@ namespace Actividad_2
             {
                 if (MessageBox.Show("De verdad lo vas a eliminar?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (Articulos!=null)
+                    if (Articulos != null)
                     {
                         consulta.eliminar(Articulos.ID);
                         MessageBox.Show("Eliminado con exito");
@@ -72,11 +72,20 @@ namespace Actividad_2
                     }
                     else
                     {
-                        MessageBox.Show("No hay nada que eliminar");
+                        if (listaArticulos != null)
+                        {
+                            consulta.eliminar(listaArticulos[0].ID);
+                            MessageBox.Show("Eliminado con exito");
+                            BlanquearTextbox();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No hay nada que eliminar");
+                        }
+
                     }
 
                 }
-                               
             }
             catch (Exception ex)
             {
@@ -140,12 +149,10 @@ namespace Actividad_2
 
             try
             {
-                if (E_Text_buscador.Text == "" && E_desplegable.SelectedIndex == -1)
+                if (E_Text_buscador.Text == "" )
                     E_Text_buscador.BackColor = Color.Red;
                 else
-                 if (E_Text_buscador.Text == "" && E_desplegable.SelectedIndex == -1)
-                    E_Text_buscador.BackColor = System.Drawing.SystemColors.Control;
-
+                 
                 if (E_desplegable.SelectedIndex >= 0 && E_Text_buscador.Text.Length > 1)
                 {
                     E_Text_buscador.BackColor = System.Drawing.SystemColors.Control;

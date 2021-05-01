@@ -18,6 +18,7 @@ namespace Actividad_2
         private List<Articulo> listaArticulos;
         public FormPresentacion()  {
             InitializeComponent();
+            
         }
        
         private void FormPresentacion_Load(object sender, EventArgs e) {
@@ -42,7 +43,7 @@ namespace Actividad_2
         private void CargarGrilla() {
 
             ConsultaPresentacion datos = new ConsultaPresentacion();
-
+            
             try {
 
                 listaArticulos = datos.Presentacion();
@@ -56,9 +57,16 @@ namespace Actividad_2
                 Show_data.Columns[5].Visible = false;
                 Show_data.Columns[6].Visible = false;
                 Show_data.Columns[7].Visible = false;
-
-                RecargarImagen(listaArticulos[0].UrlImagen);
+                if (ImagenProducto.Image == null)
+                {
+                    ImagenProducto.BackColor = Color.Transparent;
+                }
+                else
+                {
+                    RecargarImagen(listaArticulos[0].UrlImagen);
+                }
                 Show_data.CurrentCell = null;
+                
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.ToString());
@@ -90,12 +98,10 @@ namespace Actividad_2
 
             try {
 
-                if (Text_Buscador.Text == "" && Desplegable.SelectedIndex == -1)
+                if (Text_Buscador.Text == "" )
                     Text_Buscador.BackColor = Color.Red;
                 else
-                 if (Text_Buscador.Text == "" && Desplegable.SelectedIndex == -1)
-                    Text_Buscador.BackColor = System.Drawing.SystemColors.Control;
-
+               
                 if (Desplegable.SelectedIndex >= 0 && Text_Buscador.Text.Length > 1)
                 {
                     Text_Buscador.BackColor = System.Drawing.SystemColors.Control;
@@ -190,7 +196,9 @@ namespace Actividad_2
         private void bot_vertodo_Click(object sender, EventArgs e)
         {
             CargarGrilla();
+            ImagenProducto.Image = null;
             Text_Buscador.Text = "";
+            Text_Buscador.BackColor = System.Drawing.SystemColors.Control;
         }
     }
 }

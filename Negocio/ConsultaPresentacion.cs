@@ -93,7 +93,7 @@ namespace Negocio {
                 }
                                
 
-                datos.SetearConsulta("select Codigo , Nombre, ARTICULOS.Descripcion , MARCAS.Descripcion as 'marcas', CATEGORIAS.Descripcion as 'cate' ,ImagenUrl, Precio, ARTICULOS.Id from ARTICULOS inner join MARCAS on MARCAS.Id = ARTICULOS.IdMarca INNER JOIN CATEGORIAS ON CATEGORIAS.Id = ARTICULOS.IdCategoria Where " + valores);
+                datos.SetearConsulta("select Codigo , Nombre, ARTICULOS.Descripcion , MARCAS.Descripcion as 'marcas', CATEGORIAS.Descripcion as 'cate' ,ImagenUrl, Precio, ARTICULOS.Id as 'Id' from ARTICULOS inner join MARCAS on MARCAS.Id = ARTICULOS.IdMarca INNER JOIN CATEGORIAS ON CATEGORIAS.Id = ARTICULOS.IdCategoria Where " + valores);
                 datos.EjecutarLectura();
                 while (datos.Lector.Read()) {
                     Articulo aux = new Articulo();
@@ -108,7 +108,7 @@ namespace Negocio {
                     aux.Categorias.Nombre = (string)datos.Lector["cate"];
                     aux.UrlImagen = (string)datos.Lector[5];
                     aux.Precio = (Decimal)datos.Lector[6];
-                    aux.ID = (Int32)datos.Lector[7];
+                    aux.ID = (int)datos.Lector["Id"];
 
                     lista.Add(aux);
                 }

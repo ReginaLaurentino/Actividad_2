@@ -34,13 +34,24 @@ namespace Actividad_2
 
                     NuevoArticulo.agregar(nuevo);
                     MessageBox.Show("agregado sin problema");
-                    Close();
+                    Limpiar_form();
+                    
                 }
                 catch (Exception ex)  {
                     MessageBox.Show(ex.ToString());
                 }
                        
 
+        }
+
+        private void Limpiar_form ()
+        {
+            Text_Codigo.Text = "";
+            Text_Descripcion.Text = "";
+            Text_Imagen.Text = "";
+            Text_Nombre.Text = "";
+            Text_Precio.Text = "";
+            
         }
 
         private void Text_Precio_KeyPress(object sender, KeyPressEventArgs e) {

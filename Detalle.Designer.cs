@@ -116,11 +116,7 @@ namespace Actividad_2
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
             "Codigo",
-            "Nombre",
-            "Descripcion",
-            "Marca",
-            "Categoria",
-            "Precio"});
+            "Nombre"});
             this.comboBox.Location = new System.Drawing.Point(408, 6);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(121, 23);
@@ -132,7 +128,6 @@ namespace Actividad_2
             this.Text.Name = "Text";
             this.Text.Size = new System.Drawing.Size(149, 23);
             this.Text.TabIndex = 7;
-            
             // 
             // button1
             // 

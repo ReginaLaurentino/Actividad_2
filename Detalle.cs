@@ -47,12 +47,10 @@ namespace Actividad_2
 
             try
             {
-                if (Text.Text == "" && comboBox.SelectedIndex == -1)
+                if (Text.Text == "")
                     Text.BackColor = Color.Red;
                 else
-                 if (Text.Text == "" && comboBox.SelectedIndex == -1)
-                    Text.BackColor = System.Drawing.SystemColors.Control;
-
+                 
                 if(comboBox.SelectedIndex >=0 && Text.Text.Length > 1)
                 {
                     Text.BackColor = System.Drawing.SystemColors.Control;
@@ -99,7 +97,7 @@ namespace Actividad_2
         {
             try
             {
-                DialogResult Dialog = MessageBox.Show("De verad querés salir?", "Saliendo", MessageBoxButtons.YesNo);
+                DialogResult Dialog = MessageBox.Show("De verdad querés salir?", "Saliendo", MessageBoxButtons.YesNo);
                 if (Dialog == DialogResult.Yes) return;
                 else if (Dialog == DialogResult.No) e.Cancel = true;
             }
