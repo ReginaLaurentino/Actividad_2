@@ -42,27 +42,26 @@ namespace Actividad_2
                 {
                     Text_desple_mod.BackColor = System.Drawing.SystemColors.Control;
 
-
                     listaArticulos = datos.Presentacion(Desplegable_Modificar.SelectedItem.ToString(), Text_desple_mod.Text);
-                   
-                    Articulos.Codigo = listaArticulos[0].Codigo.ToString();
-                    Articulos.ID = listaArticulos[0].ID;
-                    Articulos.Nombre= listaArticulos[0].Nombre.ToString();
-                    Articulos.Descripcion = listaArticulos[0].Descripcion.ToString();
-                    Articulos.UrlImagen = listaArticulos[0].UrlImagen.ToString();
-                    Articulos.Marcas.Nombre = listaArticulos[0].Marcas.Nombre.ToString();
-                    Articulos.Categorias.Nombre = listaArticulos[0].Categorias.Nombre.ToString();
-                    Articulos.Precio = listaArticulos[0].Precio;
-                    CargarTextBox(Articulos);
-
-                 RecargarImagen(listaArticulos[0].UrlImagen);
+                    MOD_Text_codigo.Text = listaArticulos[0].Codigo.ToString();
+                    MOD_Text_nombre.Text = listaArticulos[0].Nombre.ToString();
+                    MOD_Text_descripcion.Text = listaArticulos[0].Descripcion.ToString();
+                    MOD_Text_imagen.Text = listaArticulos[0].UrlImagen.ToString();
+                    MOD_desplegable_marca.Text = listaArticulos[0].Marcas.Nombre.ToString();
+                    MOD_desplegable_categoria.Text = listaArticulos[0].Categorias.Nombre.ToString();
+                    MOD_Text_precio.Text = listaArticulos[0].Precio.ToString();
+                    ID = listaArticulos[0].ID;
+                    RecargarImagen(listaArticulos[0].UrlImagen.ToString());
+                  
+                    
                 }
-                }
-                catch (Exception ex)
-                {
-                MessageBox.Show(ex.ToString());
-                }
-                }
+            }
+            catch (Exception)
+            {
+                if (listaArticulos==null)
+                MessageBox.Show("El articulo no existe. Ingrese un dato valido");
+            }
+        }
 
                 private void FormModificar_Load(object sender, EventArgs e) {
                     MarcaNegocio marcaNegocio = new MarcaNegocio();
@@ -106,21 +105,34 @@ namespace Actividad_2
                     ConsultaPresentacion buscar = new ConsultaPresentacion();
 
                     try  {
-                    marca = buscar.BuscarIDMarca(MOD_desplegable_marca.Text);
-                    categoria = buscar.BuscarIDCategoria(MOD_desplegable_categoria.Text);
-                    consulta = " update Articulos set Codigo =  '"+ MOD_Text_codigo.Text +"' , Nombre = '" + MOD_Text_nombre.Text + "', Descripcion = '" + MOD_Text_descripcion.Text + "', IdMarca = '"+marca+"', IdCategoria= '"+categoria+"', ImagenUrl =' " + MOD_Text_imagen.Text + "', Precio = '" + MOD_Text_precio.Text + "' where Articulos.Id = '" + ID + "'";
+                        if (MOD_Text_codigo.TextLength > 0 && MOD_Text_nombre.TextLength > 0 && MOD_Text_descripcion.TextLength > 0 && MOD_Text_imagen.TextLength > 0 && MOD_Text_precio.TextLength > 0)
+                        {
+                            marca = buscar.BuscarIDMarca(MOD_desplegable_marca.Text);
+                            categoria = buscar.BuscarIDCategoria(MOD_desplegable_categoria.Text);
+                            consulta = " update Articulos set Codigo =  '" + MOD_Text_codigo.Text + "' , Nombre = '" + MOD_Text_nombre.Text + "', Descripcion = '" + MOD_Text_descripcion.Text + "', IdMarca = '" + marca + "', IdCategoria= '" + categoria + "', ImagenUrl = '" + MOD_Text_imagen.Text + "', Precio = '" + MOD_Text_precio.Text + "' where Articulos.Id = '" + ID + "'";
 
-                    buscar.Modificar(consulta);
-                    MessageBox.Show("Modificado con exito");
-                    CargarTextBox(Articulos);
+                            buscar.Modificar(consulta);
+                            MessageBox.Show("Modificado con exito");
 
+                            listaArticulos = buscar.Presentacion("ARTICULOS.Id", listaArticulos[0].ID.ToString());
 
-
-                }
-                catch (Exception ex ) {
-                throw ex;
-                }
-
+                            MOD_Text_codigo.Text = listaArticulos[0].Codigo.ToString();
+                            MOD_Text_nombre.Text = listaArticulos[0].Nombre.ToString();
+                            MOD_Text_descripcion.Text = listaArticulos[0].Descripcion.ToString();
+                            MOD_Text_imagen.Text = listaArticulos[0].UrlImagen.ToString();
+                            MOD_desplegable_marca.Text = listaArticulos[0].Marcas.Nombre.ToString();
+                            MOD_desplegable_categoria.Text = listaArticulos[0].Categorias.Nombre.ToString();
+                            MOD_Text_precio.Text = listaArticulos[0].Precio.ToString();
+                            ID = listaArticulos[0].ID;
+                            RecargarImagen(listaArticulos[0].UrlImagen.ToString());
+                        }
+                
+                                
+                    }
+                     catch (Exception ex ) {
+                          throw ex;
+                    }
+                
 
                 }
 
@@ -152,7 +164,7 @@ namespace Actividad_2
                     ID = Articulos.ID;
                      RecargarImagen(Articulos.UrlImagen);
 
-        }
+                }
 
                
     }

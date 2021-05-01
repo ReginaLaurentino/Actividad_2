@@ -53,7 +53,7 @@ namespace Actividad_2
             catch (Exception ex)
             {
 
-                throw ex;
+                E_imagen.Load("https://www.meme-arsenal.com/memes/c9e6371faa3b57eaee1d35595ca8e910.jpg");
             }
         }
 
@@ -64,17 +64,23 @@ namespace Actividad_2
             {
                 if (MessageBox.Show("De verdad lo vas a eliminar?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    consulta.eliminar(Articulos.ID);
-                    MessageBox.Show("Eliminado con exito");
-                    BlanquearTextbox();
-                  
+                    if (Articulos!=null)
+                    {
+                        consulta.eliminar(Articulos.ID);
+                        MessageBox.Show("Eliminado con exito");
+                        BlanquearTextbox();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay nada que eliminar");
+                    }
 
                 }
                                
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw (ex);
             }
         }
 

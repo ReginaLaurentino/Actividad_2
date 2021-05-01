@@ -24,7 +24,7 @@ namespace Actividad_2
 
             try {
                 CargarGrilla();
-
+                
 
             }
             catch (Exception ex) {
@@ -58,7 +58,7 @@ namespace Actividad_2
                 Show_data.Columns[7].Visible = false;
 
                 RecargarImagen(listaArticulos[0].UrlImagen);
-
+                Show_data.CurrentCell = null;
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.ToString());
@@ -106,29 +106,91 @@ namespace Actividad_2
                 }
 
             }
-            catch (Exception ex) {
-                MessageBox.Show(ex.ToString());
+            catch (Exception) {
+                MessageBox.Show("El articulo buscado no existe");
             }
         }
 
-        private void B_Modificar_Click(object sender, EventArgs e) {            
-            Articulo ART = (Articulo)Show_data.CurrentRow.DataBoundItem;
-            FormModificar Modificar = new FormModificar(ART);
-            Modificar.ShowDialog();
+        private void B_Modificar_Click(object sender, EventArgs e) {
+            try
+            {
+                
+                
+                if (Show_data.SelectedRows.Count>0)
+                {
+                    Articulo ART = (Articulo)Show_data.CurrentRow.DataBoundItem;
+                    FormModificar Modificar = new FormModificar(ART);
+                    Modificar.ShowDialog();
+                }
+                else
+                {
+                    FormModificar Modificar = new FormModificar();
+                    Modificar.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+            
            
         }
 
         private void B_Detalle_Click(object sender, EventArgs e) {
-            Articulo ART = (Articulo)Show_data.CurrentRow.DataBoundItem;
-            FormDetalle detalle = new FormDetalle(ART);
-            detalle.ShowDialog();
+            
+
+            try
+            {
+                if (Show_data.SelectedRows.Count > 0)
+                {
+                    Articulo ART = (Articulo)Show_data.CurrentRow.DataBoundItem;
+                    FormDetalle detalle = new FormDetalle(ART);
+                    detalle.ShowDialog();
+                }
+                else
+                {
+                    FormDetalle detalle = new FormDetalle();
+                    detalle.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
         }
 
         private void B_Eliminar_Click(object sender, EventArgs e) { 
-            Articulo ART = (Articulo)Show_data.CurrentRow.DataBoundItem;
-            FormEliminar eliminar = new FormEliminar(ART);
-            eliminar.ShowDialog();
+            
+            try
+            {
+                if (Show_data.SelectedRows.Count > 0)
+                {
+                    Articulo ART = (Articulo)Show_data.CurrentRow.DataBoundItem;
+                    FormEliminar eliminar = new FormEliminar(ART);
+                    eliminar.ShowDialog();
+                    CargarGrilla();
+                }
+                else
+                {
+                    FormEliminar eliminar = new FormEliminar();
+                    eliminar.ShowDialog();
+                    CargarGrilla();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+
+        }
+
+        private void bot_vertodo_Click(object sender, EventArgs e)
+        {
             CargarGrilla();
+            Text_Buscador.Text = "";
         }
     }
 }

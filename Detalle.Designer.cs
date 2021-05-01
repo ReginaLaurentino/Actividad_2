@@ -132,6 +132,7 @@ namespace Actividad_2
             this.Text.Name = "Text";
             this.Text.Size = new System.Drawing.Size(149, 23);
             this.Text.TabIndex = 7;
+            
             // 
             // button1
             // 

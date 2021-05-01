@@ -19,7 +19,7 @@ namespace Dominio {
 
         public Categoria Categorias { get; set; }
 
-        public decimal Precio { get; set; }
+        public Decimal Precio { get; set; }
 
         public int ID { get; set; }
 

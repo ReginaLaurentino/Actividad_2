@@ -41,6 +41,7 @@ namespace Actividad_2
             this.B_Eliminar = new System.Windows.Forms.Button();
             this.B_Detalle = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bot_vertodo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Show_data)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -178,18 +179,33 @@ namespace Actividad_2
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(938, 613);
+            this.pictureBox1.Location = new System.Drawing.Point(624, 362);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 84);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            // 
+            // bot_vertodo
+            // 
+            this.bot_vertodo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bot_vertodo.BackgroundImage")));
+            this.bot_vertodo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bot_vertodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bot_vertodo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bot_vertodo.Location = new System.Drawing.Point(556, 18);
+            this.bot_vertodo.Name = "bot_vertodo";
+            this.bot_vertodo.Size = new System.Drawing.Size(75, 23);
+            this.bot_vertodo.TabIndex = 11;
+            this.bot_vertodo.Text = "Ver todo";
+            this.bot_vertodo.UseVisualStyleBackColor = true;
+            this.bot_vertodo.Click += new System.EventHandler(this.bot_vertodo_Click);
             // 
             // FormPresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(745, 420);
+            this.ClientSize = new System.Drawing.Size(726, 442);
+            this.Controls.Add(this.bot_vertodo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.B_Detalle);
             this.Controls.Add(this.B_Eliminar);
@@ -225,6 +241,7 @@ namespace Actividad_2
         private System.Windows.Forms.Button B_Detalle;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.DataGridView Show_data;
+        private System.Windows.Forms.Button bot_vertodo;
     }
 }
 

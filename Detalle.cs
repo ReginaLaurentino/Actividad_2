@@ -73,7 +73,7 @@ namespace Actividad_2
             }
             catch (Exception )
             {
-                MessageBox.Show("Complete la busqueda por favor");
+                MessageBox.Show("Complete la busqueda o inserte un valor valido por favor");
             }
         }
 
@@ -132,15 +132,16 @@ namespace Actividad_2
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                throw ex;
+                D_Imagen.Load("https://www.meme-arsenal.com/memes/c9e6371faa3b57eaee1d35595ca8e910.jpg");
             }
 
 
 
         }
 
+    
     }
 }
