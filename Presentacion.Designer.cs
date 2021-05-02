@@ -112,7 +112,7 @@ namespace Actividad_2
             this.ImagenProducto.Location = new System.Drawing.Point(323, 63);
             this.ImagenProducto.Name = "ImagenProducto";
             this.ImagenProducto.Size = new System.Drawing.Size(399, 305);
-            this.ImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagenProducto.TabIndex = 5;
             this.ImagenProducto.TabStop = false;
             // 

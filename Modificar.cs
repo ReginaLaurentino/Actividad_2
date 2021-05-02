@@ -16,7 +16,7 @@ namespace Actividad_2
     {
         private List<Articulo> listaArticulos;
         private Articulo Articulos= null;
-        int ID;
+        int ID= 0;
         public FormModificar() {
             InitializeComponent();
         }
@@ -50,6 +50,7 @@ namespace Actividad_2
                     MOD_Text_precio.Text = listaArticulos[0].Precio.ToString();
                     ID = listaArticulos[0].ID;
                     RecargarImagen(listaArticulos[0].UrlImagen.ToString());
+                    Articulos = null;
                   
                     
                 }
@@ -67,8 +68,8 @@ namespace Actividad_2
                     try {
                 
                         if (Articulos != null) {
-                         CargarTextBox(Articulos);
-                    RecargarImagen(Articulos.UrlImagen);
+                                 CargarTextBox(Articulos);
+                                RecargarImagen(Articulos.UrlImagen);
                         }
 
                         MOD_desplegable_marca.DataSource = marcaNegocio.listar();
@@ -103,14 +104,20 @@ namespace Actividad_2
                     ConsultaPresentacion buscar = new ConsultaPresentacion();
 
                     try  {
-                        //if (MOD_Text_codigo.TextLength > 0 && MOD_Text_nombre.TextLength > 0 && MOD_Text_descripcion.TextLength > 0 && MOD_Text_imagen.TextLength > 0 && MOD_Text_precio.TextLength > 0)
-                       // {
-                            marca = buscar.BuscarIDMarca(MOD_desplegable_marca.Text);
-                            categoria = buscar.BuscarIDCategoria(MOD_desplegable_categoria.Text);
-                            consulta = " update Articulos set Codigo =  '" + MOD_Text_codigo.Text + "' , Nombre = '" + MOD_Text_nombre.Text + "', Descripcion = '" + MOD_Text_descripcion.Text + "', IdMarca = '" + marca + "', IdCategoria= '" + categoria + "', ImagenUrl = '" + MOD_Text_imagen.Text + "', Precio = '" + MOD_Text_precio.Text + "' where Articulos.Id = '" + ID + "'";
+                //if (MOD_Text_codigo.TextLength > 0 && MOD_Text_nombre.TextLength > 0 && MOD_Text_descripcion.TextLength > 0 && MOD_Text_imagen.TextLength > 0 && MOD_Text_precio.TextLength > 0)
+                // {
+                            if (ID != 0) {
+                                marca = buscar.BuscarIDMarca(MOD_desplegable_marca.Text);
+                                categoria = buscar.BuscarIDCategoria(MOD_desplegable_categoria.Text);
+                                consulta = " update Articulos set Codigo =  '" + MOD_Text_codigo.Text + "' , Nombre = '" + MOD_Text_nombre.Text + "', Descripcion = '" + MOD_Text_descripcion.Text + "', IdMarca = '" + marca + "', IdCategoria= '" + categoria + "', ImagenUrl = '" + MOD_Text_imagen.Text + "', Precio = '" + MOD_Text_precio.Text + "' where Articulos.Id = '" + ID + "'";
 
-                            buscar.Modificar(consulta);
-                            MessageBox.Show("Modificado con exito");
+                                buscar.Modificar(consulta);
+                                MessageBox.Show("Modificado con exito");
+                            }else
+                                {
+                                 MessageBox.Show("No hay nada para modificar");
+                             }
+                            
 
                             if (Articulos != null)
                             {
@@ -126,6 +133,7 @@ namespace Actividad_2
                                 CargarTextBox(Articulos);
 
                                 RecargarImagen(listaArticulos[0].UrlImagen);
+                                Articulos = null;
 
                             }
                             else

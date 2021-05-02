@@ -76,6 +76,7 @@ namespace Actividad_2
                         {
                             consulta.eliminar(listaArticulos[0].ID);
                             MessageBox.Show("Eliminado con exito");
+                            listaArticulos = null;
                             BlanquearTextbox();
                         }
                         else
@@ -126,7 +127,8 @@ namespace Actividad_2
                 tbMarca.Text = null;
                 tbCategoria.Text = null;
                 ID = 0;
-                E_imagen.Load("https://www.meme-arsenal.com/memes/c9e6371faa3b57eaee1d35595ca8e910.jpg");
+                E_imagen.BackColor = Color.Transparent;
+                E_Text_buscador = null;
                 
             }
             catch (Exception ex )
@@ -141,38 +143,42 @@ namespace Actividad_2
 
         private void E_B_Aceptar_Click(object sender, EventArgs e)
         {
-
-            
-
-
             ConsultaPresentacion datos = new ConsultaPresentacion();
 
             try
             {
-                if (E_Text_buscador.Text == "" )
+                if (E_Text_buscador.Text == "")
                     E_Text_buscador.BackColor = Color.Red;
                 else
-                 
-                if (E_desplegable.SelectedIndex >= 0 && E_Text_buscador.Text.Length > 1)
                 {
-                    E_Text_buscador.BackColor = System.Drawing.SystemColors.Control;
 
-                    listaArticulos = datos.Presentacion(E_desplegable.SelectedItem.ToString(), E_Text_buscador.Text);
-                    tbCodigo.Text = listaArticulos[0].Codigo.ToString();
-                    tbNombre.Text = listaArticulos[0].Nombre.ToString();
-                    tbPrecio.Text = listaArticulos[0].Precio.ToString();
-                    tbDescripcion.Text = listaArticulos[0].Descripcion.ToString();
-                    tbImagen.Text = listaArticulos[0].UrlImagen.ToString();
-                    tbMarca.Text = listaArticulos[0].Marcas.Nombre.ToString();
-                    tbCategoria.Text = listaArticulos[0].Categorias.Nombre.ToString();
-                    ID = listaArticulos[0].ID;
-                    E_imagen.Load(listaArticulos[0].UrlImagen.ToString());
+                    if (E_desplegable.SelectedIndex >= 0 && E_Text_buscador.Text.Length > 1)
+                    {
+                        E_Text_buscador.BackColor = System.Drawing.SystemColors.Control;
+
+                        listaArticulos = datos.Presentacion(E_desplegable.SelectedItem.ToString(), E_Text_buscador.Text);
+                        tbCodigo.Text = listaArticulos[0].Codigo.ToString();
+                        tbNombre.Text = listaArticulos[0].Nombre.ToString();
+                        tbPrecio.Text = listaArticulos[0].Precio.ToString();
+                        tbDescripcion.Text = listaArticulos[0].Descripcion.ToString();
+                        tbImagen.Text = listaArticulos[0].UrlImagen.ToString();
+                        tbMarca.Text = listaArticulos[0].Marcas.Nombre.ToString();
+                        tbCategoria.Text = listaArticulos[0].Categorias.Nombre.ToString();
+                        ID = listaArticulos[0].ID;
+                        E_imagen.Load(listaArticulos[0].UrlImagen.ToString());
+
+
+                    }
                 }
-
             }
             catch (Exception )
-            {
-                E_imagen.Load("https://www.meme-arsenal.com/memes/c9e6371faa3b57eaee1d35595ca8e910.jpg");
+            {   if (E_imagen.Image == null)
+                {                   
+                    E_imagen.BackColor = Color.Transparent;
+                    MessageBox.Show("El articulo buscado no existe");
+                } else { E_imagen.Load("https://www.meme-arsenal.com/memes/c9e6371faa3b57eaee1d35595ca8e910.jpg"); }
+               
+                
             }
         }
     }
