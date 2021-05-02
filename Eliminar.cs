@@ -15,7 +15,7 @@ namespace Actividad_2
     public partial class FormEliminar : Form
     {
         private List<Articulo> listaArticulos;
-        private Articulo Articulos = null;
+        private Articulo Articulos; //saque el =null
         int ID;
 
         public FormEliminar()
@@ -72,11 +72,12 @@ namespace Actividad_2
                     }
                     else
                     {
-                        if (listaArticulos != null)
+                        if (listaArticulos != null )
                         {
                             consulta.eliminar(listaArticulos[0].ID);
                             MessageBox.Show("Eliminado con exito");
-                            listaArticulos = null;
+
+                            listaArticulos.Clear();
                             BlanquearTextbox();
                         }
                         else
@@ -88,9 +89,10 @@ namespace Actividad_2
 
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                throw (ex);
+                
+                MessageBox.Show("No hay nada que eliminar");
             }
         }
 
@@ -119,17 +121,19 @@ namespace Actividad_2
         {
             try
             {
-                tbCodigo.Text = null;
-                tbNombre.Text = null;
-                tbDescripcion.Text = null;
-                tbPrecio.Text = null;
-                tbImagen.Text = null;
-                tbMarca.Text = null;
-                tbCategoria.Text = null;
+
+                tbCodigo.Clear();
+                tbNombre.Clear();
+                tbDescripcion.Clear();
+                tbPrecio.Clear();
+                tbImagen.Clear();
+                tbMarca.Clear();
+                tbCategoria.Clear();
                 ID = 0;
-                E_imagen.BackColor = Color.Transparent;
-                E_Text_buscador = null;
-                
+                E_imagen.Load("https://www.meme-arsenal.com/memes/c9e6371faa3b57eaee1d35595ca8e910.jpg");
+                //E_imagen.BackColor = Color.Transparent;
+                E_Text_buscador.Clear();
+                                
             }
             catch (Exception ex )
             {
@@ -170,15 +174,25 @@ namespace Actividad_2
 
                     }
                 }
+              
             }
-            catch (Exception )
-            {   if (E_imagen.Image == null)
-                {                   
-                    E_imagen.BackColor = Color.Transparent;
-                    MessageBox.Show("El articulo buscado no existe");
-                } else { E_imagen.Load("https://www.meme-arsenal.com/memes/c9e6371faa3b57eaee1d35595ca8e910.jpg"); }
-               
+            catch (Exception)
+            {
                 
+                if (listaArticulos.Count==0)
+                {
+                    
+                    MessageBox.Show("El articulo buscado no existe");
+                    
+                    BlanquearTextbox();
+                    E_imagen.BackColor = Color.Transparent; 
+
+                }
+                else
+                {
+                    if (E_imagen.Image == null && listaArticulos.Count != 0) E_imagen.Load("https://www.meme-arsenal.com/memes/c9e6371faa3b57eaee1d35595ca8e910.jpg");
+
+                }
             }
         }
     }

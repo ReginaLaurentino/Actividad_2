@@ -179,11 +179,11 @@ namespace Negocio {
         }
                
 
-        public void Modificar(string consulta) {
+        public void Modificar(string Codigo, string Nombre, string Descripcion, string UrlImagen, int Marca, int Categoria, decimal Precio, int Id) {
             AccesoDatos datos = new AccesoDatos();
-
+            string consulta;
             try {
-                
+                consulta = " update Articulos set Codigo =  '" + Codigo + "' , Nombre = '" + Nombre + "', Descripcion = '" + Descripcion + "', IdMarca = '" + Marca + "', IdCategoria= '" + Categoria + "', ImagenUrl = '" + UrlImagen + "', Precio = '" + Precio + "' where Articulos.Id = '" + Id + "'";
                 datos.SetearConsulta(consulta);
                 datos.EjectutarAccion();
             }

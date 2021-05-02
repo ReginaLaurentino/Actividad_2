@@ -47,7 +47,7 @@ namespace Actividad_2
                     MOD_Text_imagen.Text = listaArticulos[0].UrlImagen.ToString();
                     MOD_desplegable_marca.Text = listaArticulos[0].Marcas.Nombre.ToString();
                     MOD_desplegable_categoria.Text = listaArticulos[0].Categorias.Nombre.ToString();
-                    MOD_Text_precio.Text = listaArticulos[0].Precio.ToString();
+                    MOD_Text_precio.Text = String.Format("{0:f2}", listaArticulos[0].Precio.ToString());//listaArticulos[0].Precio.ToString();
                     ID = listaArticulos[0].ID;
                     RecargarImagen(listaArticulos[0].UrlImagen.ToString());
                     Articulos = null;
@@ -99,19 +99,17 @@ namespace Actividad_2
 
                 private void MOD_B_aceptar_Click(object sender, EventArgs e) {
 
-                    string consulta;
+                    
                     int marca, categoria;
                     ConsultaPresentacion buscar = new ConsultaPresentacion();
 
                     try  {
-                //if (MOD_Text_codigo.TextLength > 0 && MOD_Text_nombre.TextLength > 0 && MOD_Text_descripcion.TextLength > 0 && MOD_Text_imagen.TextLength > 0 && MOD_Text_precio.TextLength > 0)
-                // {
+               
                             if (ID != 0) {
                                 marca = buscar.BuscarIDMarca(MOD_desplegable_marca.Text);
                                 categoria = buscar.BuscarIDCategoria(MOD_desplegable_categoria.Text);
-                                consulta = " update Articulos set Codigo =  '" + MOD_Text_codigo.Text + "' , Nombre = '" + MOD_Text_nombre.Text + "', Descripcion = '" + MOD_Text_descripcion.Text + "', IdMarca = '" + marca + "', IdCategoria= '" + categoria + "', ImagenUrl = '" + MOD_Text_imagen.Text + "', Precio = '" + MOD_Text_precio.Text + "' where Articulos.Id = '" + ID + "'";
-
-                                buscar.Modificar(consulta);
+                                
+                                buscar.Modificar(MOD_Text_codigo.Text, MOD_Text_nombre.Text, MOD_Text_descripcion.Text, MOD_Text_imagen.Text, marca, categoria, decimal.Parse(MOD_Text_precio.Text),ID);
                                 MessageBox.Show("Modificado con exito");
                             }else
                                 {
@@ -148,7 +146,7 @@ namespace Actividad_2
                                     MOD_Text_imagen.Text = listaArticulos[0].UrlImagen.ToString();
                                     MOD_desplegable_marca.Text = listaArticulos[0].Marcas.Nombre.ToString();
                                     MOD_desplegable_categoria.Text = listaArticulos[0].Categorias.Nombre.ToString();
-                                    MOD_Text_precio.Text = listaArticulos[0].Precio.ToString();
+                                    MOD_Text_precio.Text = String.Format("{0:f2}",listaArticulos[0].Precio.ToString()); //listaArticulos[0].Precio.ToString();
                                     ID = listaArticulos[0].ID;
                                     RecargarImagen(listaArticulos[0].UrlImagen.ToString());
                                     
@@ -156,7 +154,7 @@ namespace Actividad_2
 
                              }
                             
-                        //}
+                       
                 
                                 
                     }
@@ -191,9 +189,9 @@ namespace Actividad_2
                     MOD_Text_imagen.Text = Articulos.UrlImagen;
                     MOD_desplegable_marca.Text = Articulos.Marcas.Nombre;
                     MOD_desplegable_categoria.Text = Articulos.Categorias.Nombre;
-                    MOD_Text_precio.Text = Articulos.Precio.ToString();
+                    MOD_Text_precio.Text = String.Format("{0:f2}", Articulos.Precio);//Articulos.Precio.ToString();
                     ID = Articulos.ID;
-                     RecargarImagen(Articulos.UrlImagen);
+                    RecargarImagen(Articulos.UrlImagen);
 
                 }
 

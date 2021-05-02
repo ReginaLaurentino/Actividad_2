@@ -27,7 +27,7 @@ namespace Actividad_2
                     nuevo.Codigo = Text_Codigo.Text;
                     nuevo.Nombre = Text_Nombre.Text;
                     nuevo.Descripcion = Text_Descripcion.Text;
-                    //nuevo.Precio = Convert.ToDecimal(Text_Precio.Text);
+                    nuevo.Precio = decimal.Parse(Text_Precio.Text);
                     nuevo.UrlImagen = Text_Imagen.Text;
                     nuevo.Marcas = (Marca)Desplegable_Marca.SelectedItem;
                     nuevo.Categorias = (Categoria)Desplegable_Categoria.SelectedItem;
