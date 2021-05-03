@@ -55,7 +55,7 @@ namespace Actividad_2
                 Show_data.Columns[3].Visible = false;
                 Show_data.Columns[4].Visible = false;
                 Show_data.Columns[5].Visible = false;
-                Show_data.Columns[6].Visible = false;
+                Show_data.Columns[6].Visible = true;
                 Show_data.Columns[7].Visible = false;
                 if (ImagenProducto.Image == null)
                 {
@@ -102,11 +102,11 @@ namespace Actividad_2
                     Text_Buscador.BackColor = Color.Red;
                 else
                
-                if (Desplegable.SelectedIndex >= 0 && Text_Buscador.Text.Length > 1)
+                if (Desplegable.SelectedIndex >= 0 && Text_Buscador.Text.Length >=1)
                 {
                     Text_Buscador.BackColor = System.Drawing.SystemColors.Control;
 
-                    listaArticulos = datos.Presentacion(Desplegable.SelectedItem.ToString(), Text_Buscador.Text);
+                    listaArticulos = datos.PresentacionPrincipal (Desplegable.SelectedItem.ToString(), Text_Buscador.Text);
                     Show_data.DataSource = listaArticulos;
                     RecargarImagen(listaArticulos[0].UrlImagen);
                 }
@@ -133,6 +133,7 @@ namespace Actividad_2
                     FormModificar Modificar = new FormModificar();
                     Modificar.ShowDialog();
                 }
+                CargarGrilla();
             }
             catch (Exception ex)
             {

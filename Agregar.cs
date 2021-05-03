@@ -46,11 +46,11 @@ namespace Actividad_2
 
         private void Limpiar_form ()
         {
-            Text_Codigo.Text = "";
-            Text_Descripcion.Text = "";
-            Text_Imagen.Text = "";
-            Text_Nombre.Text = "";
-            Text_Precio.Text = "";
+            Text_Codigo.Clear();
+            Text_Descripcion.Clear();
+            Text_Imagen.Clear();
+            Text_Nombre.Clear();
+            Text_Precio.Clear();
             
         }
 

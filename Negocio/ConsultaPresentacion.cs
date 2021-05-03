@@ -260,6 +260,81 @@ namespace Negocio {
 
         }
 
+        public List<Articulo> PresentacionPrincipal (string columna, string texto)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+            string valores;
+            int IDMarca, IDMCategoria;
 
+
+            try
+            {
+
+                if (columna == "Marca")
+                {
+                    IDMarca = BuscarIDMarca(texto);
+                    //aca lloramos una hora hasta q vimos que le mandabamos Marca y no IdMarca
+                    valores = " IdMarca = '" + IDMarca + "' ";
+
+                }
+                else if (columna == "Categoria")
+                {
+                    IDMCategoria = BuscarIDCategoria(texto);
+                    valores = " IdCategoria = '" + IDMCategoria + "' ";
+
+                }
+                else
+                {
+                    // valores = " " + columna + " = '" + texto + "' ";
+                    if (columna == "Descripcion")
+                    {
+                        valores = " ARTICULOS." + columna + " like '%" + texto + "%' ";
+                    }
+                    else {
+                        valores = " " + columna + " like '%" + texto + "%' ";
+
+                    }
+                }
+
+                datos.SetearConsulta("select Codigo , Nombre, ARTICULOS.Descripcion , MARCAS.Descripcion as 'marcas', CATEGORIAS.Descripcion as 'cate' ,ImagenUrl, Precio, ARTICULOS.Id as 'Id' from ARTICULOS inner join MARCAS on MARCAS.Id = ARTICULOS.IdMarca INNER JOIN CATEGORIAS ON CATEGORIAS.Id = ARTICULOS.IdCategoria Where " + valores);
+                datos.EjecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.Marcas = new Marca();
+                    aux.Categorias = new Categoria();
+
+
+                    aux.Codigo = (string)datos.Lector[0];
+                    aux.Nombre = (string)datos.Lector[1];
+                    aux.Descripcion = (string)datos.Lector[2];
+                    aux.Marcas.Nombre = (string)datos.Lector["marcas"];
+                    aux.Categorias.Nombre = (string)datos.Lector["cate"];
+                    aux.UrlImagen = (string)datos.Lector[5];
+                    aux.Precio = (decimal)datos.Lector[6];
+                    aux.ID = (int)datos.Lector["Id"];
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+
+
+
+            }
+
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
     }
 }

@@ -15,7 +15,8 @@ namespace Actividad_2
     public partial class FormEliminar : Form
     {
         private List<Articulo> listaArticulos;
-        private Articulo Articulos; //saque el =null
+        private Articulo Articulos = null;
+        
         int ID;
 
         public FormEliminar()
@@ -41,7 +42,7 @@ namespace Actividad_2
                     tbCodigo.Text = Articulos.Codigo;
                     tbNombre.Text = Articulos.Nombre;
                     tbDescripcion.Text = Articulos.Descripcion;
-                    tbPrecio.Text = Articulos.Precio.ToString();
+                    tbPrecio.Text = Articulos.Precio.ToString("N0");
                     tbImagen.Text = Articulos.UrlImagen;
                     tbMarca.Text = Articulos.Marcas.Nombre;
                     tbCategoria.Text = Articulos.Categorias.Nombre;
@@ -69,6 +70,7 @@ namespace Actividad_2
                         consulta.eliminar(Articulos.ID);
                         MessageBox.Show("Eliminado con exito");
                         BlanquearTextbox();
+                        Articulos = null;
                     }
                     else
                     {

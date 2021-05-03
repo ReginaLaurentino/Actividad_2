@@ -17,6 +17,8 @@ namespace Actividad_2
         public List<Articulo> listaArticulos = new List<Articulo>();
         private Articulo art = null;
         int ID;
+        
+
         public FormDetalle( )
         {
             InitializeComponent();
@@ -27,17 +29,14 @@ namespace Actividad_2
             InitializeComponent();
             art = articulo;
             Cargardatos();
-            
-            
-
+                 
         }
 
         private void FormDetalle_Load(object sender, EventArgs e)
         {
             Cargardatos();
         }
-        
-       
+              
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -57,7 +56,8 @@ namespace Actividad_2
                     listaArticulos = datos.Presentacion(comboBox.SelectedItem.ToString(), Text.Text);
                     textcodigo.Text = listaArticulos[0].Codigo.ToString();
                     textnombre.Text = listaArticulos[0].Nombre.ToString();
-                    textprecio.Text = listaArticulos[0].Precio.ToString();
+                    // textprecio.Text = String.Format("{0:f0}", listaArticulos[0].Precio.ToString());//listaArticulos[0].Precio.ToString();
+                    textprecio.Text = listaArticulos[0].Precio.ToString("N0");
                     textdescripcion.Text = listaArticulos[0].Descripcion.ToString();
                     texturlimagen.Text = listaArticulos[0].UrlImagen.ToString();
                     textmarca.Text = listaArticulos[0].Marcas.Nombre.ToString();
@@ -120,7 +120,9 @@ namespace Actividad_2
                     texturlimagen.Text = art.UrlImagen;
                     textmarca.Text = art.Marcas.Nombre;
                     textcategoria.Text = art.Categorias.Nombre;
-                    textprecio.Text = art.Precio.ToString();
+                    // textprecio.Text = String.Format("{0:f0}", art.Precio.ToString());//art.Precio.ToString();
+                    textprecio.Text = art.Precio.ToString("N0");
+                 // lblMonto.Text = monto.ToString("N2");
                     ID = art.ID;
                     D_Imagen.Load(art.UrlImagen);
 

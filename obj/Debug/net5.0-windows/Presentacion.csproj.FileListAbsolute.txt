@@ -116,9 +116,6 @@ C:\Users\Laura\Desktop\prog3-2\obj\Debug\net5.0-windows\Presentacion.GeneratedMS
 C:\Users\Laura\Desktop\prog3-2\obj\Debug\net5.0-windows\Presentacion.AssemblyInfoInputs.cache
 C:\Users\Laura\Desktop\prog3-2\obj\Debug\net5.0-windows\Presentacion.AssemblyInfo.cs
 C:\Users\Laura\Desktop\prog3-2\obj\Debug\net5.0-windows\Presentacion.csproj.CoreCompileInputs.cache
-C:\Users\Laura\Desktop\prog3-2\obj\Debug\net5.0-windows\Presentacion.dll
-C:\Users\Laura\Desktop\prog3-2\obj\Debug\net5.0-windows\ref\Presentacion.dll
-C:\Users\Laura\Desktop\prog3-2\obj\Debug\net5.0-windows\Presentacion.pdb
 C:\Users\Laura\Desktop\prog3-2\bin\Debug\net5.0-windows\Presentacion.exe
 C:\Users\Laura\Desktop\prog3-2\bin\Debug\net5.0-windows\Presentacion.deps.json
 C:\Users\Laura\Desktop\prog3-2\bin\Debug\net5.0-windows\Presentacion.runtimeconfig.json
@@ -137,4 +134,7 @@ C:\Users\Laura\Desktop\prog3-2\bin\Debug\net5.0-windows\Negocio.dll
 C:\Users\Laura\Desktop\prog3-2\bin\Debug\net5.0-windows\Dominio.pdb
 C:\Users\Laura\Desktop\prog3-2\bin\Debug\net5.0-windows\Negocio.pdb
 C:\Users\Laura\Desktop\prog3-2\obj\Debug\net5.0-windows\Presentacion.csproj.CopyComplete
+C:\Users\Laura\Desktop\prog3-2\obj\Debug\net5.0-windows\Presentacion.dll
+C:\Users\Laura\Desktop\prog3-2\obj\Debug\net5.0-windows\ref\Presentacion.dll
+C:\Users\Laura\Desktop\prog3-2\obj\Debug\net5.0-windows\Presentacion.pdb
 C:\Users\Laura\Desktop\prog3-2\obj\Debug\net5.0-windows\Presentacion.genruntimeconfig.cache
