@@ -53,16 +53,18 @@ namespace Negocio {
         {
             AccesoDatos datos = new AccesoDatos();
 
-            try {
+            try 
+            {
                 string valores = "values('" + nuevo.Codigo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', " + nuevo.Marcas.ID + ", " + nuevo.Categorias.ID + ", '" + nuevo.UrlImagen + "', " + nuevo.Precio + ")";
                 datos.SetearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) " + valores);
                 datos.EjectutarAccion();
             }
-            catch (Exception ex) {
+            catch (Exception ex) 
+            {
                 throw ex;
             }
-
-            finally {
+            finally 
+            {
                 datos.cerrarConexion();
             }
         }
@@ -79,7 +81,6 @@ namespace Negocio {
                 
                 if( columna == "Marca") {
                     IDMarca = BuscarIDMarca(texto);
-                    //aca lloramos una hora hasta q vimos que le mandabamos Marca y no IdMarca
                     valores = " IdMarca = '" + IDMarca + "' ";
 
                 } else if (columna == "Categoria")
@@ -89,7 +90,8 @@ namespace Negocio {
 
                 } else
                 {
-                    valores = " " + columna + " = '" + texto + "' ";
+                     valores = " " + columna + " = '" + texto + "' ";
+                    
                 }
                                
 
@@ -129,7 +131,6 @@ namespace Negocio {
             }
 
         }
-
 
         public int BuscarIDMarca (string marca) {
             int ID=0;
@@ -177,13 +178,12 @@ namespace Negocio {
             }
             return ID;
         }
-               
-
+              
         public void Modificar(string Codigo, string Nombre, string Descripcion, string UrlImagen, int Marca, int Categoria, decimal Precio, int Id) {
             AccesoDatos datos = new AccesoDatos();
             string consulta;
             try {
-                consulta = " update Articulos set Codigo =  '" + Codigo + "' , Nombre = '" + Nombre + "', Descripcion = '" + Descripcion + "', IdMarca = '" + Marca + "', IdCategoria= '" + Categoria + "', ImagenUrl = '" + UrlImagen + "', Precio = '" + Precio + "' where Articulos.Id = '" + Id + "'";
+                consulta = " update Articulos set Codigo =  '" + Codigo + "' , Nombre = '" + Nombre + "', Descripcion = '" + Descripcion + "', IdMarca = '" + Marca + "', IdCategoria= '" + Categoria + "', ImagenUrl = '" + UrlImagen + "', Precio = " + Precio + " where Articulos.Id = '" + Id + "'";
                 datos.SetearConsulta(consulta);
                 datos.EjectutarAccion();
             }
@@ -211,6 +211,7 @@ namespace Negocio {
             }
             finally {
                 datos.cerrarConexion();
+                datos = null;
             }
         }
 
@@ -259,7 +260,7 @@ namespace Negocio {
 
 
         }
-
+                
         public List<Articulo> PresentacionPrincipal (string columna, string texto)
         {
             List<Articulo> lista = new List<Articulo>();
@@ -274,7 +275,6 @@ namespace Negocio {
                 if (columna == "Marca")
                 {
                     IDMarca = BuscarIDMarca(texto);
-                    //aca lloramos una hora hasta q vimos que le mandabamos Marca y no IdMarca
                     valores = " IdMarca = '" + IDMarca + "' ";
 
                 }
@@ -286,7 +286,7 @@ namespace Negocio {
                 }
                 else
                 {
-                    // valores = " " + columna + " = '" + texto + "' ";
+                    
                     if (columna == "Descripcion")
                     {
                         valores = " ARTICULOS." + columna + " like '%" + texto + "%' ";
@@ -336,5 +336,6 @@ namespace Negocio {
             }
 
         }
+                
     }
 }

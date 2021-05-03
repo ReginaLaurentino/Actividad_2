@@ -39,8 +39,7 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                MessageBox.Show(ex.Message);
             }
         }
 

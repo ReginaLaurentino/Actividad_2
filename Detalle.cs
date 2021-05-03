@@ -24,6 +24,7 @@ namespace Actividad_2
             InitializeComponent();
             
         }
+
         public FormDetalle(Articulo articulo)
         {
             InitializeComponent();
@@ -39,9 +40,6 @@ namespace Actividad_2
               
         private void button1_Click(object sender, EventArgs e)
         {
-            
-
-
             ConsultaPresentacion datos = new ConsultaPresentacion();
 
             try
@@ -103,7 +101,7 @@ namespace Actividad_2
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -141,7 +139,6 @@ namespace Actividad_2
 
 
         }
-
-    
+            
     }
 }

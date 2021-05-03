@@ -16,6 +16,7 @@ namespace Actividad_2
     {
 
         private List<Articulo> listaArticulos;
+
         public FormPresentacion()  {
             InitializeComponent();
             
@@ -30,7 +31,7 @@ namespace Actividad_2
             }
             catch (Exception ex) {
 
-                throw ex;
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -40,6 +41,7 @@ namespace Actividad_2
             agregar.ShowDialog();
             CargarGrilla();
         }
+
         private void CargarGrilla() {
 
             ConsultaPresentacion datos = new ConsultaPresentacion();
@@ -119,9 +121,7 @@ namespace Actividad_2
 
         private void B_Modificar_Click(object sender, EventArgs e) {
             try
-            {
-                
-                
+            {             
                 if (Show_data.SelectedRows.Count>0)
                 {
                     Articulo ART = (Articulo)Show_data.CurrentRow.DataBoundItem;
@@ -137,7 +137,7 @@ namespace Actividad_2
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message);
 
             }
             
@@ -163,7 +163,7 @@ namespace Actividad_2
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message);
 
             }
         }
@@ -188,7 +188,7 @@ namespace Actividad_2
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message);
 
             }
 

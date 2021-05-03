@@ -19,7 +19,6 @@ namespace Actividad_2
             InitializeComponent();
         }
 
-
         private void B_Aceptar_Click(object sender, EventArgs e) {
                 Articulo nuevo = new Articulo();
                 ConsultaPresentacion NuevoArticulo = new ConsultaPresentacion();
@@ -76,7 +75,7 @@ namespace Actividad_2
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message);
             }
 
 

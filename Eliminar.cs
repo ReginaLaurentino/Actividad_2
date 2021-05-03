@@ -16,7 +16,6 @@ namespace Actividad_2
     {
         private List<Articulo> listaArticulos;
         private Articulo Articulos = null;
-        
         int ID;
 
         public FormEliminar()
@@ -24,13 +23,11 @@ namespace Actividad_2
             InitializeComponent();
         }
 
-       public FormEliminar(Articulo art)
+        public FormEliminar(Articulo art)
         {
             InitializeComponent();
             Articulos = art;
         }
-
-
 
         private void FormEliminar_Load(object sender, EventArgs e)
         {
@@ -51,7 +48,7 @@ namespace Actividad_2
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
 
                 E_imagen.Load("https://www.meme-arsenal.com/memes/c9e6371faa3b57eaee1d35595ca8e910.jpg");
@@ -98,7 +95,6 @@ namespace Actividad_2
             }
         }
 
-
         private void E_B_cancelar_Click_1(object sender, EventArgs e)
         {
             Close();
@@ -114,7 +110,7 @@ namespace Actividad_2
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -140,7 +136,7 @@ namespace Actividad_2
             catch (Exception ex )
             {
 
-                throw ex;
+                MessageBox.Show(ex.Message);
             }
             
 

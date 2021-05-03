@@ -229,6 +229,7 @@ namespace Actividad_2
             this.MOD_Text_precio.Name = "MOD_Text_precio";
             this.MOD_Text_precio.Size = new System.Drawing.Size(224, 23);
             this.MOD_Text_precio.TabIndex = 19;
+            this.MOD_Text_precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MOD_Text_precio_KeyPress);
             // 
             // MOD_Text_imagen
             // 
