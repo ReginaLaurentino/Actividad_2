@@ -55,7 +55,7 @@ namespace Actividad_2
                 Show_data.Columns[3].Visible = false;
                 Show_data.Columns[4].Visible = false;
                 Show_data.Columns[5].Visible = false;
-                Show_data.Columns[6].Visible = true;
+                Show_data.Columns[6].Visible = false;
                 Show_data.Columns[7].Visible = false;
                 if (ImagenProducto.Image == null)
                 {
